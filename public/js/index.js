@@ -70,7 +70,7 @@ function onNaviLoad(r) {
 		} 
 		html += '</div>';
 		html += '<div class="sub-wrap">';
-		if(r.navs[i].indexOf("IMAGE") > -1) {
+		if(r.navs[i].class.indexOf("IMAGE") > -1) {
 			for(var j in r.navs[i].subs) {
 				html += '<div class="sub">';
 				html += '<div class="title">'+r.navs[i].subs[j].title+'</div>';
@@ -78,7 +78,7 @@ function onNaviLoad(r) {
 				html += '</div>';
 			}
 		}
-		else if(r.navs[i].indexOf("WIDE") > -1) {
+		else if(r.navs[i].class.indexOf("WIDE") > -1) {
 			html += '<div class="wrapper">';
 			html += '	<div class="lt">';
 			html += columnMaker(r.navs[i].subs);
@@ -157,17 +157,11 @@ function onNaviLoad(r) {
 			html += '	</div>';	// .rt
 			html += '<div>';
 		}
-		else if(r.navs[i].indexOf("COL") > -1 ){
-			html += '<div class="sub">';
-			html += '</div>'
+		else if(r.navs[i].class.indexOf("COL") > -1 ){
+			
 			html += columnMaker(r.navs[i].subs);
 		}
-		if(r.navs[i].class == "COL3"){
-
-		}
-		if(r.navs[i].class == "COL4"){
-
-		}
+		
 		html += '</div>';	// .sub-wrap
 		html += '</div>'; // .navi
 		$(".navi-wrap").append(html);
@@ -185,6 +179,9 @@ function onNaviLoad(r) {
 	$(".sub-slide .bt-prev").click(onSubPrevClick);
 	$(".sub-slide .bt-next").click(onSubNextClick);
 }
+
+
+
 /*
 <div class="navi">
 	<span class="title">HOME <i class="fa fa-angle-down"></i></span>
@@ -239,6 +236,9 @@ function onNaviLoad(r) {
 	</div>
 </div>
 */
+
+
+
 
 
 

@@ -174,17 +174,52 @@
 				{"title": "Project with video", "link": "#", "icon": ""}
 		] },
 		{"title": "SHOP", "link": "#", "subs": [
-			{"title": "Shopping Cart", "link": "#", "icon": ""},
-			{"title": "Checkout", "link": "#", "icon": ""},
-			{"title": "My Account", "link": "#", "icon": ""},
-			{"title": "Wishlist", "link": "#", "icon": ""},
+			{"title": "<i class='fa fa-shopping-cart'></i> Shopping Cart", "link": "#", "icon": ""},
+			{"title": "<i class='fa fa-credit-card'></i> Checkout", "link": "#", "icon": ""},
+			{"title": "<i class='fa fa-user'></i> My Account", "link": "#", "icon": ""},
+			{"title": "<i class='fa fa-heart'></i> Wishlist", "link": "#", "icon": ""},
 			{"title": "Track order", "link": "#", "icon": ""},
 			{"title": "404 Not Found", "link": "#", "icon": ""},
 			{"title": "Maintenance mode", "link": "#", "icon": ""},
 			{"title": "Maintenance 2", "link": "#", "icon": ""}
 	] }]},
-		{"title": "FEATURES", "type":"COL COL3", "link": "#", "class":"COL3", "icon": "", "subs": []}
-		]
+
+		{"title": "FEATURES", "bg":"", "link": "#", "class":"COL COL3 BG", "icon": "","subs": [
+			{"title": "XTEMOS ELEMENTS", "link": "#", "subs": [
+				{"title": "Google Maps", "link": "#", "icon": ""},
+				{"title": "BannersHOT ", "link": "#", "icon": "HOT", "color": "yellow"},
+				{"title": "Titles ", "link": "#", "icon": ""},
+				{"title": "Instagram ", "link": "#", "icon": "" },
+				{"title": "Social Buttons ", "link": "#", "icon": ""},
+				{"title": "Team Member ", "link": "#", "icon": ""},
+				{"title": "Section Dividers", "link": "#", "icon": "NEW","color":"green"},
+				{"title": "Testimonials ", "link": "#", "icon": ""},
+				{"title": "Blog Element ", "link": "#", "icon": ""}
+			]},
+				{"title": "XTEMOS ELEMENTS", "link": "#", "subs": [
+					{"title": "Countdown timer ", "link": "#", "icon": ""},
+					{"title": "360 degree view", "link": "#", "icon": ""},
+					{"title": "Menu price ", "link": "#", "icon": ""},
+					{"title": "Infobox ", "link": "#", "icon": ""},
+					{"title": "Pricing tables", "link": "#", "icon": ""},
+					{"title": "Product AJAX arrows ", "link": "#", "icon": "HOT","color": "yellow"},
+					{"title": "Product load more ", "link": "#", "icon": ""},
+					{"title": "Portfolio element ", "link": "#", "icon": ""},
+					{"title": "Images gallery ", "link": "#", "icon": "HOT","color": "yellow"}
+			] },
+			{"title": "FEATURES", "link": "#", "subs": [
+				{"title": "Basel Slider ", "link": "#", "icon": "NEW", "color": "green"},
+				{"title": "Product filters", "link": "#", "icon": "HOT","color": "yellow"},
+				{"title": "Extra menu list", "link": "#", "icon": ""},
+				{"title": "AJAX products tabs", "link": "#", "icon": ""},
+				{"title": "Animated counter", "link": "#", "icon": ""},
+				{"title": "Timeline", "link": "#", "icon": ""},
+				{"title": "Brands Element", "link": "#", "icon": ""},
+				{"title": "Products Slider", "link": "#", "icon": ""},
+				{"title": "Button with popup", "link": "#", "icon": ""}
+		] }
+		
+	]}]
 }
 
 
