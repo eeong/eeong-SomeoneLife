@@ -34,6 +34,28 @@ function subAni() {
 	});
 }
 
+function columnMaker(data){
+	var html ='';
+	html += '		<div class="subs">';
+	for(var i in data) {
+		html += '			<div class="sub">';
+		html += '				<div class="title">'+data[i].title+'</div>';
+		for(var j in data[i].subs) {
+			html += '			<div class="name por">'+data[i].subs[j].title;
+			if(data[i].subs[j].icon != ''){
+				html += '<div class="icon '+data[i].subs[j].color+'">'+data[i].subs[j].icon;
+				html += '<i class="fas fa-caret-right"></i>';
+				html += '</div>';
+			}
+			html +='</div>';
+		}
+		html += '			</div>';
+	}
+	html += '		</div>';
+return html;
+}
+
+
 /** Main Navi 생성 **********************/
 $.get('../json/navi.json', onNaviLoad);
 function onNaviLoad(r) {
@@ -48,7 +70,7 @@ function onNaviLoad(r) {
 		} 
 		html += '</div>';
 		html += '<div class="sub-wrap">';
-		if(i == 0) {
+		if(r.navs[i].indexOf("IMAGE") > -1) {
 			for(var j in r.navs[i].subs) {
 				html += '<div class="sub">';
 				html += '<div class="title">'+r.navs[i].subs[j].title+'</div>';
@@ -56,25 +78,10 @@ function onNaviLoad(r) {
 				html += '</div>';
 			}
 		}
-		else if(i == 1) {
+		else if(r.navs[i].indexOf("WIDE") > -1) {
 			html += '<div class="wrapper">';
 			html += '	<div class="lt">';
-			html += '		<div class="subs">';
-			for(var j in r.navs[i].subs) {
-				html += '			<div class="sub">';
-				html += '				<div class="title">'+r.navs[i].subs[j].title+'</div>';
-				for(var k in r.navs[i].subs[j].subs) {
-					html += '			<div class="name por">'+r.navs[i].subs[j].subs[k].title;
-					if(r.navs[i].subs[j].subs[k].icon != ''){
-						html += '<div class="icon '+r.navs[i].subs[j].subs[k].color+'">'+r.navs[i].subs[j].subs[k].icon;
-						html += '<i class="fas fa-caret-right"></i>';
-						html += '</div>';
-					}
-					html +='</div>';
-				}
-				html += '			</div>';
-			}
-			html += '		</div>';
+			html += columnMaker(r.navs[i].subs);
 			html += '		<div class="infos">';
 			for(var j in r.navs[i].infos) {
 				html += '<div class="info">';
@@ -85,7 +92,7 @@ function onNaviLoad(r) {
 				html += '	<div class="content">'+r.navs[i].infos[j].content+'</div>';
 				html += '</div>';
 			}
-			html += '		</div>';
+			html += '		</div>'; 
 			html += '	</div>';	// .lt
 			html += '	<div class="rt">';
 			html += '		<div class="sub-slide">';
@@ -149,6 +156,17 @@ function onNaviLoad(r) {
 			html += '		</div>';	// .sub-slide
 			html += '	</div>';	// .rt
 			html += '<div>';
+		}
+		else if(r.navs[i].indexOf("COL") > -1 ){
+			html += '<div class="sub">';
+			html += '</div>'
+			html += columnMaker(r.navs[i].subs);
+		}
+		if(r.navs[i].class == "COL3"){
+
+		}
+		if(r.navs[i].class == "COL4"){
+
 		}
 		html += '</div>';	// .sub-wrap
 		html += '</div>'; // .navi
@@ -221,3 +239,6 @@ function onNaviLoad(r) {
 	</div>
 </div>
 */
+
+
+

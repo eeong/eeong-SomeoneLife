@@ -1,6 +1,6 @@
 {
 	"navs": [
-		{"title": "HOME", "link": "#", "class":"navi0", "icon": "", "subs": [
+		{"title": "HOME", "link": "#", "class":"IMAGE", "icon": "", "subs": [
 			{"title": "<span>1.</span> Bakery", "src": "../img/bakery.jpg", "link": "#"},
 			{"title": "<span>2.</span> Bicycle", "src": "../img/bicycle.jpg", "link": "#"},
 			{"title": "<span>3.</span> Car", "src": "../img/coffee.jpg", "link": "#"},
@@ -12,7 +12,7 @@
 			{"title": "<span>9.</span> Game", "src": "../img/game.jpg", "link": "#"},
 			{"title": "<span>10.</span> Lighting", "src": "../img/lighting.jpg", "link": "#"}
 		]},
-		{"title": "SHOP", "link": "#", "class":"navi1 poss", "icon": "SALE", "color": "red", "subs": [
+		{"title": "SHOP", "link": "#", "class":"COL WIDE COL4", "icon": "SALE", "color": "red", "subs": [
 				{"title": "SHOP STYLES", "link": "#", "subs": [
 					{"title": "Quick shop product", "link": "#", "icon": "HOT", "color": "yellow"},
 					{"title": "Masonry Grid", "link": "#", "icon": ""},
@@ -129,10 +129,62 @@
 				}
 			]
 		},
-		{"title": "BLOG", "link": "#", "class":"navi2", "icon": "", "subs": []},
-		{"title": "PAGES", "link": "#", "class":"navi3", "icon": "", "subs": []},
-		{"title": "FEATURES", "link": "#", "class":"navi4", "icon": "", "subs": []}
-	]
+		{"title": "BLOG", "link": "#", "class":"COL COL1", "icon": "", "subs": [ {"title":"","link":"","icon":"","subs":[
+			{"title":"BLOG DEFAULT", "link":"#", "icon":""},
+			{"title":"ALTERNATIVE STYLE", "link":"#", "icon":""},
+			{"title":"BLOG FULL WIDTH", "link":"#", "icon":""},
+			{"title":"SMALL IMAGES", "link":"#", "icon":""},
+			{"title":"MASONRY GRID", "link":"#", "icon":""},
+			{"title":"BLOG MASK", "link":"#", "icon":"HOT","color":"yellow"},
+			{"title":"4 COLUMNS", "link":"#", "icon":""},
+			{"title":"BLOG SINGLE POST", "link":"#", "icon":""},
+			{"title":"BLOG RTL", "link":"#", "icon":"NEW", "color":"green"}
+		]}
+		]},
+
+		{"title": "PAGES", "link": "#", "class":"COL COL4", "icon": "", "subs": [
+			{"title": "PAGES", "link": "#", "subs": [
+				{"title": "FaQs", "link": "#", "icon": "HOT", "color": "yellow"},
+				{"title": "About Me", "link": "#", "icon": ""},
+				{"title": "Our Shop", "link": "#", "icon": ""},
+				{"title": "Our Service", "link": "#", "icon": "" },
+				{"title": "Our Company", "link": "#", "icon": ""},
+				{"title": "Contact Us", "link": "#", "icon": ""},
+				{"title": "Contact Us 2", "link": "#", "icon": ""},
+				{"title": "Our Gallery", "link": "#", "icon": ""}
+			]},
+				{"title": "HEADERS", "link": "#", "subs": [
+					{"title": "Header base", "link": "#", "icon": ""},
+					{"title": "Simplified", "link": "#", "icon": ""},
+					{"title": "With logo center", "link": "#", "icon": ""},
+					{"title": "Categories menu", "link": "#", "icon": "HOT", "color": "yellow"},
+					{"title": "Top bar menu", "link": "#", "icon": ""},
+					{"title": "Split menu", "link": "#", "icon": ""},
+					{"title": "Dark header", "link": "#", "icon": ""},
+					{"title": "Colored header", "link": "#", "icon": "HOT","color": "yellow"}
+			] },
+			{"title": "PORTFOLIO", "link": "#", "subs": [
+				{"title": "Grid 4 Columns", "link": "#", "icon": "HOT", "color": "yellow"},
+				{"title": "Grid No Space", "link": "#", "icon": ""},
+				{"title": "Grid full width", "link": "#", "icon": ""},
+				{"title": "Alternative style", "link": "#", "icon": ""},
+				{"title": "Grid with text", "link": "#", "icon": ""},
+				{"title": "Single Project", "link": "#", "icon": ""},
+				{"title": "Project Full Width", "link": "#", "icon": ""},
+				{"title": "Project with video", "link": "#", "icon": ""}
+		] },
+		{"title": "SHOP", "link": "#", "subs": [
+			{"title": "Shopping Cart", "link": "#", "icon": ""},
+			{"title": "Checkout", "link": "#", "icon": ""},
+			{"title": "My Account", "link": "#", "icon": ""},
+			{"title": "Wishlist", "link": "#", "icon": ""},
+			{"title": "Track order", "link": "#", "icon": ""},
+			{"title": "404 Not Found", "link": "#", "icon": ""},
+			{"title": "Maintenance mode", "link": "#", "icon": ""},
+			{"title": "Maintenance 2", "link": "#", "icon": ""}
+	] }]},
+		{"title": "FEATURES", "type":"COL COL3", "link": "#", "class":"COL3", "icon": "", "subs": []}
+		]
 }
 
 
