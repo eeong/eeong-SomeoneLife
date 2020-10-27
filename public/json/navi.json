@@ -202,10 +202,8 @@
 					{"title": "Menu price ", "link": "#", "icon": ""},
 					{"title": "Infobox ", "link": "#", "icon": ""},
 					{"title": "Pricing tables", "link": "#", "icon": ""},
-					{"title": "Product AJAX arrows ", "link": "#", "icon": "HOT","color": "yellow"},
-					{"title": "Product load more ", "link": "#", "icon": ""},
-					{"title": "Portfolio element ", "link": "#", "icon": ""},
-					{"title": "Images gallery ", "link": "#", "icon": "HOT","color": "yellow"}
+					{"title": "Product AJAX arrows ", "link": "#", "icon": "HOT","color": "yellow"}
+				
 			] },
 			{"title": "FEATURES", "link": "#", "subs": [
 				{"title": "Basel Slider ", "link": "#", "icon": "NEW", "color": "green"},
@@ -213,11 +211,9 @@
 				{"title": "Extra menu list", "link": "#", "icon": ""},
 				{"title": "AJAX products tabs", "link": "#", "icon": ""},
 				{"title": "Animated counter", "link": "#", "icon": ""},
-				{"title": "Timeline", "link": "#", "icon": ""},
-				{"title": "Brands Element", "link": "#", "icon": ""},
-				{"title": "Products Slider", "link": "#", "icon": ""},
-				{"title": "Button with popup", "link": "#", "icon": ""}
-		] }
+				{"title": "Timeline", "link": "#", "icon": ""}
+			
+		]}
 		
 	]}]
 }

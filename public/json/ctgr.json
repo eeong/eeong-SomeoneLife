@@ -1,0 +1,15 @@
+{
+	"ctgrs" :[
+		{"id":1,"title":"WOMEN’S CLOTHING","link":"#","arrow":true,"subs":[]},
+		{"id":1,"title":"MEN’S CLOTHING","link":"#","arrow":true,"subs":[]},
+		{"id":1,"title":"WATCHES MAN","link":"#","arrow":false,"subs":[]},
+		{"id":1,"title":"BAGS & SHOES","link":"#","arrow":true,"subs":[]},
+		{"id":1,"title":"JEWELRY","link":"#","arrow":false,"subs":[]},
+		{"id":1,"title":"ACCESSORIES","link":"#","arrow":false,"subs":[]},
+		{"id":1,"title":"BAGS","link":"#","arrow":false,"subs":[]},
+		{"id":1,"title":"TOYS, KIDS & BABY","link":"#","arrow":false,"subs":[]},
+		{"id":1,"title":"SPORTS & OUTDOORS","link":"#","arrow":false,"subs":[]},
+		{"id":1,"title":"HEALTH & BEAUTY","link":"#","arrow":false,"subs":[]},
+		{"id":1,"title":"FURNITURE","link":"#","arrow":false,"subs":[]}
+	]
+}

@@ -1,0 +1,7 @@
+{
+	"banners" :[
+		{"id":1,"src":"../img/slider-1.jpg", "desc":"Best Furniture For Your Life", "title":"DESIGN CHAIR", "price":799, "link":"#"},
+		{"id":2,"src":"../img/slider-2.jpg", "desc":"Best Furniture For Your Castle", "title":"YELLOW SOFA", "price":899, "link":"#"},
+		{"id":3,"src":"../img/slider-3.jpg", "desc":"Best Furniture For Your Shelter", "title":"WOOD CHAIR", "price":1099, "link":"#"}
+	]
+}

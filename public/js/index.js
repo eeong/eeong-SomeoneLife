@@ -1,39 +1,9 @@
-function onEnter() {
-	$(this).find(".sub-wrap").css("display", "flex");
-}
-function onLeave() {
-	$(this).find(".sub-wrap").css("display", "none");
-}
-function onColorClick() {
-	$(this).addClass("active").siblings().removeClass("active");
-	var $imgCase = $(this).parent().prev().find(".img-case");
-	$imgCase.stop().fadeOut(100);
-	$imgCase.eq($(this).index()).stop().delay(100).fadeIn(100);
-}
-
+/*********** GLOBAL ************/
 var subNow = 0;
 var subLast = 3;
-function onSubPrevClick() {
-	if(subNow == 0) {
-		subNow = subLast - 1;
-		$(".sub-slide .wrap").css("left", -subLast * 100 +"%");
-	}
-	else subNow--;
-	subAni();
-}
-function onSubNextClick() {
-	if(subNow < subLast) subNow++;
-	subAni();
-}
-function subAni() {
-	$(".sub-slide .wrap").stop().animate({"left": -100 * subNow +"%"}, 500, function(){
-		if(subNow == subLast) {
-			subNow = 0;
-			$(".sub-slide .wrap").css("left", 0);
-		}
-	});
-}
 
+
+/*********** FUNCTION ************/
 function columnMaker(data){
 	var html ='';
 	html += '		<div class="subs">';
@@ -52,12 +22,52 @@ function columnMaker(data){
 		html += '			</div>';
 	}
 	html += '		</div>';
-return html;
+	return html;
+}
+
+function subAni() {
+	$(".sub-slide .wrap").stop().animate({"left": -100 * subNow +"%"}, 500, function(){
+		if(subNow == subLast) {
+			subNow = 0;
+			$(".sub-slide .wrap").css("left", 0);
+		}
+	});
 }
 
 
+
+/*********** CALLBACK ************/
+function onEnter() {
+	$(this).find(".sub-wrap").css("display", "flex");
+}
+function onLeave() {
+	$(this).find(".sub-wrap").css("display", "none");
+}
+function onColorClick() {
+	$(this).addClass("active").siblings().removeClass("active");
+	var $imgCase = $(this).parent().prev().find(".img-case");
+	$imgCase.stop().fadeOut(100);
+	$imgCase.eq($(this).index()).stop().delay(100).fadeIn(100);
+}
+
+
+function onSubPrevClick() {
+	if(subNow == 0) {
+		subNow = subLast - 1;
+		$(".sub-slide .wrap").css("left", -subLast * 100 +"%");
+	}
+	else subNow--;
+	subAni();
+}
+function onSubNextClick() {
+	if(subNow < subLast) subNow++;
+	subAni();
+}
+
+
+
 /** Main Navi 생성 **********************/
-$.get('../json/navi.json', onNaviLoad);
+
 function onNaviLoad(r) {
 	var html = '';
 	for(var i in r.navs) {
@@ -105,9 +115,9 @@ function onNaviLoad(r) {
 				for(var k in r.navs[i].slides[j].cases){
 					html += '		<div class="img-case '+(k==0 ? "active" : "")+'">';
 					for(var l in r.navs[i].slides[j].cases[k].img){
-					html += '<img src="'+r.navs[i].slides[j].cases[k].img[l]+'" class="w-100">';
+						html += '<img src="'+r.navs[i].slides[j].cases[k].img[l]+'" class="w-100">';
 					}
-				html += '		</div>';
+					html += '		</div>';
 				}
 				html += '<div class="bt bt-quick">';
 				html += '<i class="fa fa-shopping-cart"></i> QUICK SHOP';
@@ -164,81 +174,218 @@ function onNaviLoad(r) {
 		
 		html += '</div>';	// .sub-wrap
 		html += '</div>'; // .navi
-		$(".navi-wrap").append(html);
-	}
-	$(".navi-wrap > .navi").mouseenter(onEnter);
-	$(".navi-wrap > .navi").mouseleave(onLeave);
-	$(".sub-slide .color").find("span").click(onColorClick);
-	$(".sub-slide .wrap").swipe({
+		$(".navi-wrap").append(html);}
+		
+		for(var i in r.navs){
+			html = '<li class="mob-navi">';
+			html += '<div class="title">'+r.navs[i].title+'</div>';
+			html += '<div class="bt-down">';
+			html += '<div class="slash-lt slash"></div>';
+			html += '<div class="slash-rt slash"></div>';
+			html += '</div>';
+			html += '<ul class="mob-sub">';
+			html += '<i class="fa fa-caret-up"></i>';
+			if(r.navs[i].subs && r.navs[i].subs.length == 1){
+				r.navs[i].subs =  r.navs[i].subs[0].subs;
+			}
+			for(var j in r.navs[i].subs){
+				html += '<li class="mob-sub-navi">';
+				html += '<div class="title">'+r.navs[i].subs[j].title+'</div>'
+			
+				if(r.navs[i].subs[j].subs && r.navs[i].subs[j].subs.length > 0){
+				html += '<div class="bt-down">';
+				html += '<div class="slash-lt slash"></div>';
+				html += '<div class="slash-rt slash"></div>';
+				html += '</div>';
+				html += '<ul class="mob-sub-sub mob-sub">';
+				for(var k in r.navs[i].subs[j].subs){
+					html += '<li> '+r.navs[i].subs[j].subs[k].title+' </li>';
+					}
+				html += '</ul>';
+				}
+				html += '</li>';
+			}
+			html += '</ul>';
+			html += '</li>';
+			$(".mob-navi-wrap").append(html);
+		}
+
+		$(".navi-wrap > .navi").mouseenter(onEnter);
+		$(".navi-wrap > .navi").mouseleave(onLeave);
+		$(".sub-slide .color").find("span").click(onColorClick);
+		$(".sub-slide .wrap").swipe({
 		swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
 			if(direction == 'left') $(".sub-slide .bt-next").trigger("click");
 			if(direction == 'right') $(".sub-slide .bt-prev").trigger("click");
 		},
 		threshold: 30
 	});
-	$(".sub-slide .bt-prev").click(onSubPrevClick);
-	$(".sub-slide .bt-next").click(onSubNextClick);
+
+	$(".mob-wrapper").on("scroll touchmove mousewheel", onMobScroll);
+	$(".mob-wrap").on("scroll touchmove mousewheel", onMobWrapScroll);
+	$(".navi-mob-icon").on("click", onMobClick);
+	$(".mob-wrapper").on("click", onMobClose);
+	$(".mob-wrap").on("click", onMobWrapClick);
+	$(".mob-navi .bt-down").on("click", onMobNaviClick);
+
+	$(".sub-slide .bt-prev").on("click",onSubPrevClick);
+	$(".sub-slide .bt-next").on("click",onSubNextClick);
+} /* onNavi -end-  */
+
+function onCtgrLoad(r){
+	var html ='';
+	for (var i in r.ctgrs){
+		html += '<div class="ctgr">'+r.ctgrs[i].title;
+		if (r.ctgrs[i].arrow == true) html += '<i class="fa fa-angle-right"></i>';
+		html += '</div>';
+	}
+	$(".ctgr-wrap").append(html);
+}
+
+var bannerNow = 0;
+var bannerLast = 0;
+var banners = [];
+var bannerWidth = 0;
+function onBannerLoad(r){
+	var html = '';
+	for (var i in r.banners){
+		html = '<div class="slide" style="background-image : url('+r.banners[i].src+')">';
+		html += '<h3 class="desc">'+r.banners[i].desc+'</h3>';
+		html += '<h2 class="title">'+r.banners[i].title+'</h2>';
+		html += '<h4 class="price">$ <span>'+r.banners[i].price+'</span> </h4>';
+		html += '<button class="bt-banner">Shop Other</button>';
+		html += '</div>';
+		banners.push($(html).appendTo(".banner-wrapper .slide-wrap"));
+	}
+	bannerLast = $(".banner-wrapper .slide-wrap").length - 1;
+	$(".banner-wrapper .slide-wrap").swipe({
+		triggerOnTouchEnd: true,
+		swipeStatus : swipeStatus
+	});
+}
+
+/* function onBannerSwipe(event, direction, distance, duration, fingerCount, fingerData){
+	if(direction == "left"){
+		if(bannerNow < bannerLast){
+			bannerNow++;
+			bannerAni();
+		}
+	}
+	if(direction == "right"){
+		if(bannerNow > 0) {
+			bannerNow--;
+			bannerAni();
+		}
+	}
+} 
+
+function bannerAni(){
+	$(".banner-wrapper .slide-wrap").stop().animate({left : -bannerNow*100+"%"},500);
+}*/
+
+function swipeStatus(event, phase, direction, distance) {
+	if (phase == "move" && (direction == "left" || direction == "right")) {
+			var duration = 0;
+			bannerWidth = $(".banner-wrapper .slide").eq(0).outerWidth();
+			console.log(bannerWidth);
+			if (direction == "left") {
+					scrollImages((bannerWidth * bannerNow) + distance, duration);
+			} else if (direction == "right") {
+					scrollImages((bannerWidth * bannerNow) - distance, duration);
+			}
+	} else if (phase == "cancel") {
+			scrollImages(bannerWidth * bannerNow, 500);
+	} else if (phase == "end") {
+			if (direction == "right") {
+					previousImage();
+			} else if (direction == "left") {
+					nextImage();
+			}
+	}
+}
+
+function previousImage() {
+	bannerNow = Math.max(bannerNow - 1, 0);
+	scrollImages(bannerWidth * bannerNow, 500);
+}
+
+function nextImage() {
+	bannerNow = Math.min(bannerNow + 1, bannerLast);
+	scrollImages(bannerWidth * bannerNow, 500);
+}
+
+function scrollImages(distance, duration) {
+	$(".banner-wrapper .slide").css("transition-duration", (duration / 1000).toFixed(1) + "s");
+
+	//inverse the number we set in the css
+	var value = (distance < 0 ? "" : "-") + Math.abs(distance).toString();
+	$(".banner-wrapper .slide").css("transform", "translate(" + value + "px,0)");
+}
+
+function onResize(e){
+	 var winWid = $(this).outerWidth();
+	 if(winWid > 991 && $(".mob-wrapper").css("display") == 'block') {$(".mob-wrapper").trigger("click");
+	 }
+}
+
+function onScroll(e){
+	var scTop = $(this).scrollTop();
+	if(scTop > 180){
+		$(".top-wrapper").css("display","none");
+		$(".search-wrapper").css("display","none");
+		$(".header-wrapper").css({"position":"fixed","transform":
+		"translateY(-10px)","top":"10px","box-shadow":"0 0 4px rgba(0,0,0,0.2)"});
+		$(".title-wrapper .navi.WIDE .sub-wrap ").css({"top":"85px"});
+	} else {
+		$(".top-wrapper").css("display","block");
+		$(".search-wrapper").css("display","flex");
+		$(".header-wrapper").css({"position":"static","top":0,"box-shadow":"none"});
+		$(".title-wrapper .navi.WIDE .sub-wrap ").css({"top":"122px"});
+	}
+}
+
+function onMobScroll(e){
+	e.preventDefault();
+	e.stopPropagation();
+	$("body, html").css({"overflow":"hidden","height":"100%"});
+}
+
+function onMobWrapScroll(e){
+	e.stopPropagation();
+	var winHei =$(window).outerHeight();
+	var meHei =$(this).find(".mo-navi-wrap").outerHeight();
+	if (meHei <= winHei) e.preventDefault();
 }
 
 
+function onMobClick(e){
+	$(".mob-wrapper").css({"display":"block"});
+	$(".mob-wrapper").css("background-color");
+	$(".mob-wrapper").css({"background-color":"rgba(0,0,0,0.6)"});
+	$(".mob-wrap").css({"left":0});
+}
 
-/*
-<div class="navi">
-	<span class="title">HOME <i class="fa fa-angle-down"></i></span>
-	<div class="sub-wrap">
-		<div class="sub">
-			<div class="title">1. HOME DEFAULT</div>
-			<div class="cont-img"><img src="../img/default.jpg" alt="그림" class="w-100"></div>
-		</div>
-	</div>
-</div>
-
-
-
-<div class="sub-slide">
-	<div class="stage">
-		<div class="wrap">
-			<div class="slide">
-				<div class="img-wrap">
-					<div class="img-case active">
-						<img src="../img/ss-01-blue-01.jpg" class="w-100">
-						<img src="../img/ss-01-blue-02.jpg" class="w-100">
-					</div>
-					<div class="bt bt-icon bt-heart">
-						<div class="popper">
-							Login to use Wishlist <i class="fa fa-caret-right"></i>
-						</div>
-						<i class="far fa-heart"></i>
-					</div>
-					<div class="bt bt-icon bt-sync">
-						<div class="popper">
-							Compare <i class="fa fa-caret-right"></i>
-						</div>
-						<i class="fa fa-sync"></i>
-					</div>
-					<div class="bt bt-icon bt-search">
-						<div class="popper">
-							Quick View <i class="fa fa-caret-right"></i>
-						</div>
-						<i class="fa fa-search-plus"></i>
-					</div>
-				</div>
-				<div class="color">
-					<span class="blue">●</span>
-				</div>
-				<div class="title">Yus condntum sapien</div>
-				<div class="brand">BASEL</div>
-				<div class="price">$592.00</div>
-			</div>
-		</div>
-		<div class="bt-pager bt-prev">〈</div>
-		<div class="bt-pager bt-next">〉</div>
-	</div>
-</div>
-*/
+function onMobClose(e){
+	$(".mob-wrapper").css({"background-color":"rgba(0,0,0,0)"});
+	$(".mob-wrapper").delay(500).hide(0);
+	$(".mob-wrap").css("left","-270px");
+	e.stopPropagation();
+}
+function onMobWrapClick(e){
+	e.stopPropagation();
+}
 
 
+function onMobNaviClick(){
+	$(this).toggleClass("active").siblings(".mob-sub").stop().slideToggle(300);
+	
+	}
 
 
+	
 
-
+	$.get('../json/navi.json', onNaviLoad);
+	$.get('../json/ctgr.json', onCtgrLoad);
+	$.get('../json/banner.json', onBannerLoad);
+	$(window).on("scroll",onScroll);
+	$(window).on("resize",onResize);
