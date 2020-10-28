@@ -243,9 +243,8 @@ function onCtgrLoad(r){
 }
 
 var bannerNow = 0;
-var bannerLast = 0;
-var banners = [];
-var bannerWidth = 0;
+var $banners = [];
+
 function onBannerLoad(r){
 	var html = '';
 	for (var i in r.banners){
@@ -255,46 +254,30 @@ function onBannerLoad(r){
 		html += '<h4 class="price">$ <span>'+r.banners[i].price+'</span> </h4>';
 		html += '<button class="bt-banner">Shop Other</button>';
 		html += '</div>';
-		banners.push($(html).appendTo(".banner-wrapper .slide-wrap"));
+		$banners.push($(html).appendTo(".banner-wrapper .slide-wrap"));
 	}
 	bannerLast = $(".banner-wrapper .slide-wrap").length - 1;
 	$(".banner-wrapper .slide-wrap").swipe({
 		triggerOnTouchEnd: true,
 		swipeStatus : swipeStatus
 	});
+	$(".banner-wrapper .bt-prev").on("click",onBannerPrev);
+	$(".banner-wrapper .bt-next").on("click",onBannerNext);
 }
 
-/* function onBannerSwipe(event, direction, distance, duration, fingerCount, fingerData){
-	if(direction == "left"){
-		if(bannerNow < bannerLast){
-			bannerNow++;
-			bannerAni();
-		}
-	}
-	if(direction == "right"){
-		if(bannerNow > 0) {
-			bannerNow--;
-			bannerAni();
-		}
-	}
-} 
+function getBannerWidth(){
+	return $(".banner-wrapper .slide").eq(0).outerWidth();
+}
 
-function bannerAni(){
-	$(".banner-wrapper .slide-wrap").stop().animate({left : -bannerNow*100+"%"},500);
-}*/
+function getBannerLast(){
+	return $(".banner-wrapper .slide").length-1;
+}
 
 function swipeStatus(event, phase, direction, distance) {
 	if (phase == "move" && (direction == "left" || direction == "right")) {
-			var duration = 0;
-			bannerWidth = $(".banner-wrapper .slide").eq(0).outerWidth();
-			console.log(bannerWidth);
-			if (direction == "left") {
-					scrollImages((bannerWidth * bannerNow) + distance, duration);
-			} else if (direction == "right") {
-					scrollImages((bannerWidth * bannerNow) - distance, duration);
-			}
+			scrollImages((getBannerWidth() * bannerNow) + (direction == "left" ? distance : - distance), 0);
 	} else if (phase == "cancel") {
-			scrollImages(bannerWidth * bannerNow, 500);
+			scrollImages(getBannerWidth() * bannerNow, 500);
 	} else if (phase == "end") {
 			if (direction == "right") {
 					previousImage();
@@ -306,26 +289,43 @@ function swipeStatus(event, phase, direction, distance) {
 
 function previousImage() {
 	bannerNow = Math.max(bannerNow - 1, 0);
-	scrollImages(bannerWidth * bannerNow, 500);
+	scrollImages(getBannerWidth() * bannerNow, 500);
 }
 
 function nextImage() {
-	bannerNow = Math.min(bannerNow + 1, bannerLast);
-	scrollImages(bannerWidth * bannerNow, 500);
+	bannerNow = Math.min(bannerNow + 1, getBannerLast());
+	scrollImages(getBannerWidth() * bannerNow, 500);
 }
 
 function scrollImages(distance, duration) {
-	$(".banner-wrapper .slide").css("transition-duration", (duration / 1000).toFixed(1) + "s");
-
-	//inverse the number we set in the css
 	var value = (distance < 0 ? "" : "-") + Math.abs(distance).toString();
+	$(".banner-wrapper .slide").css("transition-duration", (duration / 1000).toFixed(1) + "s");
 	$(".banner-wrapper .slide").css("transform", "translate(" + value + "px,0)");
 }
+
+function onBannerPrev(){
+	bannerNow = bannerNow == 0 ? getBannerLast() : bannerNow - 1;
+	bannerAni()
+}
+
+function onBannerNext(){
+	bannerNow = bannerNow == getBannerLast() ? 0 : bannerNow + 1;
+	bannerAni()
+	
+}
+
+function bannerAni(){
+	var $slide = $($banners[bannerNow]).clone().appendTo(".banner-wrapper .slide-stage").addClass("active");
+	$slide.stop().animate({"opacity":1},500,function(){scrollImages(getBannerWidth() * bannerNow, 0);
+	$(this).remove();
+	});
+	}
 
 function onResize(e){
 	 var winWid = $(this).outerWidth();
 	 if(winWid > 991 && $(".mob-wrapper").css("display") == 'block') {$(".mob-wrapper").trigger("click");
 	 }
+	 scrollImages(getBannerWidth()*bannerNow,0);
 }
 
 function onScroll(e){
