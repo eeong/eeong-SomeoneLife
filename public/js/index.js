@@ -1,7 +1,7 @@
 /*********** GLOBAL ************/
 var subNow = 0;
 var subLast = 3;
-
+var ctgrPrds = []; //ctgr-wrapper
 
 /*********** FUNCTION ************/
 function columnMaker(data){
@@ -178,6 +178,7 @@ function onNaviLoad(r) {
 		$(".header-wrapper .navi-wrap").append(html);}
 		var slideWid = $(".sub-slide.type1 .slide").length * 100 +"%";
 		$(".sub-slide.type1 .wrap").css("width",slideWid);
+
 		for(var i in r.navs){
 			html = '<li class="mob-navi">';
 			html += '<div class="title">'+r.navs[i].title+'</div>';
@@ -329,7 +330,44 @@ function onPrdLoad(r){
 }
 
 
-	
+function onPrdCtgrLoad(r){
+	var html ='';
+	for(var i in r.ctgrs){
+		html = '<div class="cate '+r.ctgrs[i].class+'">';
+		html += '<div class="cont">';
+		html += '<div class="designer">DESIGNERS: <span>'+r.ctgrs[i].designer+'</span></div>';
+		html += '<h2 class="title">'+r.ctgrs[i].title+'</h2>';
+		html += '<div class="price">$'+r.ctgrs[i].price+'</div>';
+		html += '<div class="desc">'+r.ctgrs[i].content+'</div>';
+		html += '<button class="bt-read">READ MORE</button> </div>';
+		html += '<div class="image"><img src="'+r.ctgrs[i].src[0]+'" alt="cate" class="w-100"></div>';
+		html += '<div class="image"><img src="'+r.ctgrs[i].src[1]+'" alt="cate" class="w-100"></div>';
+		html += '</div>';
+		ctgrPrds.push($(html));
+	}
+	$(".ctgr-wrapper .navi").on("click", onCateNaviClick);
+	$(".ctgr-wrapper .navi").eq(0).trigger("click");
+}
+
+function onCateNaviClick(e){
+	$(this).addClass("active");
+	$(this).siblings().removeClass("active");
+	var id = $(this).index();
+	cateAni(id);
+}
+
+function cateAni(id){
+	console.log(ctgrPrds[id])
+	$(".ctgr-wrapper .cate").css({"opacity":0,"transform":"translateY(100px)"});
+	var slide = $(ctgrPrds[id].clone()).appendTo(".ctgr-wrapper .cate-wrap").css({"opacity":0,"transform":"translateY(100px)","position":"absolute"});
+	slide.css("opacity");
+	slide.css("transform");
+	slide.css({"opacity":1, "transform":"translateY(0)"});
+	setTimeout(function(){
+		$(".ctgr-wrapper .cate").remove();
+		$(ctgrPrds[id].clone()).appendTo(".ctgr-wrapper .cate-wrap");
+	},500);
+}
 
 function getBannerWidth(){
 	return $(".banner-wrapper .slide").eq(0).outerWidth();
@@ -453,5 +491,6 @@ function onMobNaviClick(){
 	$.get('../json/ctgr.json', onCtgrLoad);
 	$.get('../json/banner.json', onBannerLoad);
 	$.get('../json/prd.json', onPrdLoad);
+	$.get('../json/prd-ctgr.json', onPrdCtgrLoad);
 	$(window).on("scroll",onScroll);
 	$(window).on("resize",onResize);

@@ -1,0 +1,7 @@
+{
+	"ctgrs" : [
+		{"id":1, "class":"LT", "title":"EAMES SOFA COMPACT", "designer":"VALENTINO RACHELLI", "price":"800","content":"Vel himenaeos quam fringilla a interdum blandit adipiscing ullamcorper per consequat in ut a enim suspendisse luctus commodo varius dictumst egestas at curae ultricies nam.","src":["../img/cate-01-a.jpg","../img/cate-01-b.jpg"]},
+		{"id":2, "class":"CT", "title":"EAMES SOFA COMPACT", "designer":"CHARLES AND RAY EAMES", "price":"800","content":"Vel himenaeos quam fringilla a interdum blandit adipiscing ullamcorper per consequat in ut a enim suspendisse luctus commodo varius dictumst egestas at curae ultricies nam.","src":["../img/cate-02-a.jpg","../img/cate-02-b.jpg"]},
+		{"id":3, "class":"RT", "title":"EAMES SOFA COMPACT", "designer":"VALENTINO RACHELLI", "price":"800","content":"Vel himenaeos quam fringilla a interdum blandit adipiscing ullamcorper per consequat in ut a enim suspendisse luctus commodo varius dictumst egestas at curae ultricies nam.","src":["../img/cate-03-a.jpg","../img/cate-03-b.jpg"]}
+	]
+}

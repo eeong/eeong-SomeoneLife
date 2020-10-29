@@ -214,11 +214,33 @@ html, body {font-size: 16px; height: 6000px; font-family: 'Rubik', sans-serif;}
 
 
 .ctgr-wrapper .navi > div{ line-height: 1; }
-.ctgr-wrapper .navi > div::after{transform: scaleX(0); transform-origin: right; transition: transform 0.5s;}
+.ctgr-wrapper .navi > div::after{display: block; content:""; 
+border-bottom: 1px solid #111;	transform: scaleX(0); height: 2px; transform-origin: right; transition: transform 0.5s;}
 .ctgr-wrapper .navi.active > div::after{ border-color: #277045 ; transform: scaleX(1);}
 .ctgr-wrapper .navi:not(.active):hover > div::after{ transform: scaleX(1); transform-origin: left;}
 
+.ctgr-wrapper .cate-wrap {position: relative; margin-top: 2em;}
+.ctgr-wrapper .cate {display: flex; top: 0; left: 0; width: 100%; transition:all 0.5s;}
+.ctgr-wrapper .cate > div {flex:33.3333% 0 0;}
+.ctgr-wrapper .cate.LT .cont{text-align: left;}
+.ctgr-wrapper .cate.CT .cont{text-align: center;}
+.ctgr-wrapper .cate.RT .cont{text-align: right;}
+.ctgr-wrapper .cate.LT > :nth-child(1) {order: 1;}
+.ctgr-wrapper .cate.LT > :nth-child(2) {order: 2;}
+.ctgr-wrapper .cate.LT > :nth-child(3) {order: 3;}
+.ctgr-wrapper .cate.CT > :nth-child(1) {order: 2;}
+.ctgr-wrapper .cate.CT > :nth-child(2) {order: 1;}
+.ctgr-wrapper .cate.CT > :nth-child(3) {order: 3;}
+.ctgr-wrapper .cate.RT > :nth-child(1) {order: 3;}
+.ctgr-wrapper .cate.RT > :nth-child(2) {order: 1;}
+.ctgr-wrapper .cate.RT > :nth-child(3) {order: 2;}
 
+.ctgr-wrapper .designer {color: #999; font-size: 0.875em;	}
+.ctgr-wrapper .title {color: #333; font-size: 2.5em; padding: 0.5em 0;}
+.ctgr-wrapper .price {color: #339059; font-size: 3em;}
+.ctgr-wrapper .desc {color: #666; font-size: 0.875em;}
+.ctgr-wrapper .bt-read {border:none; background-color: #277045; padding: 0.5em 1em; margin-top: 1.5em; font-size: 0.75em; color: #fafafa; transition:all 0.5s;}
+.ctgr-wrapper .bt-read:hover {background-color: #35a363;}
 
 /**************** mob wrapper ******************/
 .mob-wrapper {background-color: rgba(0,0,0,0); width: 100%; height: 100vh; position: fixed; z-index: 1000; top: 0; left: 0; transition:background-color 0.5s; display: none; }
@@ -271,6 +293,8 @@ html, body {font-size: 16px; height: 6000px; font-family: 'Rubik', sans-serif;}
 	.middle-wrapper {flex-wrap:wrap;}
 	.middle-wrapper .middle{flex:100% 0 0; margin: 1em 0;}
 	.middle-wrapper .middle:nth-child(2){flex:100% 0 0;}
+	.ctgr-wrapper .cate {flex-direction: column;}
+	.ctgr-wrapper .cate > div {flex:100% 0 0;}
 }
 @media screen and (max-width: 767px) {
 	.gift-wrapper {flex-direction: column; align-items: stretch;}
