@@ -26,10 +26,10 @@ function columnMaker(data){
 }
 
 function subAni() {
-	$(".sub-slide .wrap").stop().animate({"left": -100 * subNow +"%"}, 500, function(){
+	$(".sub-slide.type1 .wrap").stop().animate({"left": -100 * subNow +"%"}, 500, function(){
 		if(subNow == subLast) {
 			subNow = 0;
-			$(".sub-slide .wrap").css("left", 0);
+			$(".sub-slide.type1 .wrap").css("left", 0);
 		}
 	});
 }
@@ -54,7 +54,7 @@ function onColorClick() {
 function onSubPrevClick() {
 	if(subNow == 0) {
 		subNow = subLast - 1;
-		$(".sub-slide .wrap").css("left", -subLast * 100 +"%");
+		$(".sub-slide.type1 .wrap").css("left", -subLast * 100 +"%");
 	}
 	else subNow--;
 	subAni();
@@ -105,7 +105,7 @@ function onNaviLoad(r) {
 			html += '		</div>'; 
 			html += '	</div>';	// .lt
 			html += '	<div class="rt">';
-			html += '		<div class="sub-slide">';
+			html += '		<div class="sub-slide type1">';
 			html += '			<div class="stage">';
 			html += '				<div class="wrap">';
 			r.navs[i].slides.push(r.navs[i].slides[0]);
@@ -166,6 +166,7 @@ function onNaviLoad(r) {
 			html += '		</div>';	// .sub-slide
 			html += '	</div>';	// .rt
 			html += '<div>';
+
 		}
 		else if(r.navs[i].class.indexOf("COL") > -1 ){
 			
@@ -174,8 +175,9 @@ function onNaviLoad(r) {
 		
 		html += '</div>';	// .sub-wrap
 		html += '</div>'; // .navi
-		$(".navi-wrap").append(html);}
-		
+		$(".header-wrapper .navi-wrap").append(html);}
+		var slideWid = $(".sub-slide.type1 .slide").length * 100 +"%";
+		$(".sub-slide.type1 .wrap").css("width",slideWid);
 		for(var i in r.navs){
 			html = '<li class="mob-navi">';
 			html += '<div class="title">'+r.navs[i].title+'</div>';
@@ -210,13 +212,13 @@ function onNaviLoad(r) {
 			$(".mob-navi-wrap").append(html);
 		}
 
-		$(".navi-wrap > .navi").mouseenter(onEnter);
-		$(".navi-wrap > .navi").mouseleave(onLeave);
-		$(".sub-slide .color").find("span").click(onColorClick);
-		$(".sub-slide .wrap").swipe({
+		$(".header-wrapper .navi-wrap > .navi").mouseenter(onEnter);
+		$(".header-wrapper .navi-wrap > .navi").mouseleave(onLeave);
+		$(".sub-slide.type1 .color").find("span").click(onColorClick);
+		$(".sub-slide.type1 .wrap").swipe({
 		swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-			if(direction == 'left') $(".sub-slide .bt-next").trigger("click");
-			if(direction == 'right') $(".sub-slide .bt-prev").trigger("click");
+			if(direction == 'left') $(".sub-slide.type1 .bt-next").trigger("click");
+			if(direction == 'right') $(".sub-slide.type1 .bt-prev").trigger("click");
 		},
 		threshold: 30
 	});
@@ -228,8 +230,8 @@ function onNaviLoad(r) {
 	$(".mob-wrap").on("click", onMobWrapClick);
 	$(".mob-navi .bt-down").on("click", onMobNaviClick);
 
-	$(".sub-slide .bt-prev").on("click",onSubPrevClick);
-	$(".sub-slide .bt-next").on("click",onSubNextClick);
+	$(".sub-slide.type1 .bt-prev").on("click",onSubPrevClick);
+	$(".sub-slide.type1 .bt-next").on("click",onSubNextClick);
 } /* onNavi -end-  */
 
 function onCtgrLoad(r){
@@ -239,7 +241,7 @@ function onCtgrLoad(r){
 		if (r.ctgrs[i].arrow == true) html += '<i class="fa fa-angle-right"></i>';
 		html += '</div>';
 	}
-	$(".ctgr-wrap").append(html);
+	$(".banner-wrapper .ctgr-wrap").append(html);
 }
 
 var bannerNow = 0;
@@ -265,6 +267,70 @@ function onBannerLoad(r){
 	$(".banner-wrapper .bt-next").on("click",onBannerNext);
 }
 
+function onPrdLoad(r){
+	console.log(r);
+	var html = '';
+	for(var i in r.prds){
+		html = '<div class="slide swiper-slide">';
+		html += '<div class="img-wrap">';
+		html += '<div class="img-case active">';
+		html += '<img src='+r.prds[i].src[0]+' class="w-100"><img src='+r.prds[i].src[1]+' class="w-100"> </div>';
+		html += '<div class="bt bt-icon bt-heart">';
+		html += '<div class="popper"> Login to use Wishlist <i class="fa fa-caret-right"></i> </div>';
+		html += '<i class="far fa-heart"></i></div>';
+		html += '<div class="bt bt-icon bt-sync">	<div class="popper"> Compare <i class="fa fa-caret-right"></i> </div> <i class="fa fa-sync"></i></div>';
+		html += '<div class="bt bt-icon bt-search"><div class="popper"> Quick View <i class="fa fa-caret-right"></i> </div> <i class="fa fa-search-plus"></i></div></div>';
+		html += '<div class="title">'+r.prds[i].title+'</div>';
+		html += '<div class="brand">'+r.prds[i].code+'</div>';
+		html += '<div class="price-wrap">';
+		html += '<div class="price">$'+r.prds[i].price+'</div>';
+		html += '<div class="cart">';
+		html += '<i class="fa fa-shopping-cart"></i>Add To Cart</div> ';
+		html += '</div>';
+		html += '</div>';
+		$(".sub-slide.type2 .swiper-wrapper").append(html);
+	}
+	
+	function getCount(){
+		var wid =$(window).outerWidth();
+		var count = 4;
+		if(wid > 767 && wid <= 991){
+			count = 3;
+		}
+		else if(wid > 575 && wid <= 767){
+			count = 2;
+		}
+		else if(wid <= 575){
+			count = 1;
+		}
+		return count;
+	}
+		
+		var swiper = new Swiper('.sub-slide.type2 .swiper-container', {
+			slidesPerView: getCount(),
+			spaceBetween: 0,
+			slidesPerGroup: getCount(),
+			loop: true,
+			loopFillGroupWithBlank: false,
+			/* pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			}, */
+			navigation: {
+				nextEl: '.bt-next',
+				prevEl: '.bt-prev',
+			},
+		});
+
+		swiper.on("resize",function(){
+		this.params.slidesPerGroup = getCount();
+		this.params.slidesPerView = getCount();
+	});
+}
+
+
+	
+
 function getBannerWidth(){
 	return $(".banner-wrapper .slide").eq(0).outerWidth();
 }
@@ -286,7 +352,6 @@ function swipeStatus(event, phase, direction, distance) {
 			}
 	}
 }
-
 function previousImage() {
 	bannerNow = Math.max(bannerNow - 1, 0);
 	scrollImages(getBannerWidth() * bannerNow, 500);
@@ -387,5 +452,6 @@ function onMobNaviClick(){
 	$.get('../json/navi.json', onNaviLoad);
 	$.get('../json/ctgr.json', onCtgrLoad);
 	$.get('../json/banner.json', onBannerLoad);
+	$.get('../json/prd.json', onPrdLoad);
 	$(window).on("scroll",onScroll);
 	$(window).on("resize",onResize);

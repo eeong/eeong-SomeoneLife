@@ -1,0 +1,10 @@
+{
+	"prds":[
+		{"id":1,"title":"Yovbeglass Side Chair","code":"DEMO-1","price":"579.00","src": ["../img/chair-01-f.jpg", "../img/chair-01-b.jpg"]},
+		{"id":2,"title":"Yood Side Chair","code":"DEMO-2","price":"579.00","src": ["../img/chair-02-f.jpg", "../img/chair-02-b.jpg"]},
+		{"id":3,"title":"Yovdad Plastic Chair","code":"DEMO-3","price":"579.00","src": ["../img/chair-03-f.jpg", "../img/chair-03-b.jpg"]},
+		{"id":4,"title":"Yovlastic Side Chair","code":"DEMO-4","price":"579.00","src": ["../img/chair-04-f.jpg", "../img/chair-04-b.jpg"]},
+		{"id":5,"title":"Yovlastic Chair","code":"DEMO-5","price":"579.00","src": ["../img/chair-05-f.jpg", "../img/chair-05-b.jpg"]},
+		{"id":6,"title":"Just Side Chair","code":"DEMO-6","price":"579.00","src": ["../img/chair-06-f.jpg", "../img/chair-06-b.jpg"]}
+	]
+}
