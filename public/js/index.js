@@ -306,8 +306,8 @@ function onPrdLoad(r){
 		}
 		return count;
 	}
-		
-		var swiper = new Swiper('.sub-slide.type2 .swiper-container', {
+
+	 		var swiper = new Swiper('.sub-slide.type2 .swiper-container', {
 			slidesPerView: getCount(),
 			spaceBetween: 0,
 			slidesPerGroup: getCount(),
@@ -347,6 +347,69 @@ function onPrdCtgrLoad(r){
 	}
 	$(".ctgr-wrapper .navi").on("click", onCateNaviClick);
 	$(".ctgr-wrapper .navi").eq(0).trigger("click");
+}
+
+function onBranchLoad(r){
+	var html = '';
+	for(var i in r.branches){
+		html = '<li class="branch">';
+		html += '<img src="'+r.branches[i].src+'" alt="'+r.branches[i].title+'" class="w-100">';
+		html += '<button class="bt-link">'+r.branches[i].title+'</button>';
+		html += '</li>';
+		$(".branch-wrapper .branch-wrap").append(html);
+	}
+}
+
+function onBlogLoad(r){
+	var html = '';
+	for(var i in r.blogs){
+		html = '<div class="blog slide swiper-slide"> ';
+		html += '<div class="img-wrap"> ';
+		html += '			<img src="'+r.blogs[i].src+'" alt="blog" class="w-100"> ';
+		html += '			<div class="date-wrap"> ';
+		html += '<div class="date">'+r.blogs[i].date+'</div> ';
+		html += '				<div class="month">'+r.blogs[i].mon+'</div> ';
+		html += '			</div> ';
+		html += '			<div class="tag">'+r.blogs[i].tag+'</div> ';
+		html += '		</div> ';
+		html += '<div class="title">'+r.blogs[i].title+'</div> ';
+		html += '		<button class="bt-comment">Leave a comment</button> ';
+		html += '		<div class="desc">'+r.blogs[i].desc+'</div> ';
+		html += '		<button class="bt-read">Read More</button> ';
+		html += '	</div>	 ';
+		$(".blog-wrapper .blog-wrap").append(html);
+	}
+	function getCount2(){
+		var wid =$(window).outerWidth();
+		var count = 3;
+		if(wid > 767 && wid <= 991){
+			count = 2;
+		}
+		else if(wid > 575 && wid <= 767){
+			count = 1;
+		}
+		return count;
+	}
+		
+	var swiper = new Swiper('.sub-slide.type3 .swiper-container', {
+		slidesPerView: getCount2(),
+		spaceBetween: 0,
+		slidesPerGroup: getCount2(),
+		loop: true,
+		loopFillGroupWithBlank: false,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.bt-next',
+			prevEl: '.bt-prev',
+		},
+	});
+ swiper.on("resize",function(){
+		this.params.slidesPerGroup = getCount2();
+		this.params.slidesPerView = getCount2();
+	});
 }
 
 function onCateNaviClick(e){
@@ -492,5 +555,7 @@ function onMobNaviClick(){
 	$.get('../json/banner.json', onBannerLoad);
 	$.get('../json/prd.json', onPrdLoad);
 	$.get('../json/prd-ctgr.json', onPrdCtgrLoad);
+	$.get('../json/branch.json', onBranchLoad);
+	$.get('../json/blog.json', onBlogLoad);
 	$(window).on("scroll",onScroll);
 	$(window).on("resize",onResize);

@@ -11,7 +11,7 @@ font-family: 'Lora', serif;
 /**************** 공통사항 ******************/
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
 
-html, body {font-size: 16px; height: 6000px; font-family: 'Rubik', sans-serif;}
+html, body {font-size: 16px; height:8000px; font-family: 'Rubik', sans-serif;}
 .wrapper {width: 1100px; margin: 0 auto;}
 
 .badge-wrap {position: relative;}
@@ -84,6 +84,11 @@ html, body {font-size: 16px; height: 6000px; font-family: 'Rubik', sans-serif;}
 .sub-slide.type2 .price-wrap .price {color: #999;}
 .sub-slide.type2 .price-wrap > div{height: 100%; transition: all 0.3s; }
 .sub-slide.type2 .slide:hover .price-wrap > div {transform:translateY(-100%);}
+
+
+.sub-slide.type3 .wrapper .wrap {width: calc(100% - 0px); left:0px; }
+.sub-slide.type3 .slide { padding: 24px 24px 40px 24px;}
+
 
 
 /**************** .header-wrapper ******************/
@@ -242,6 +247,37 @@ border-bottom: 1px solid #111;	transform: scaleX(0); height: 2px; transform-orig
 .ctgr-wrapper .bt-read {border:none; background-color: #277045; padding: 0.5em 1em; margin-top: 1.5em; font-size: 0.75em; color: #fafafa; transition:all 0.5s;}
 .ctgr-wrapper .bt-read:hover {background-color: #35a363;}
 
+/**************** branch wrapper ******************/
+.branch-wrapper {background: url("../img/bg-categorie-2.jpg") no-repeat center -10vh; background-size: cover; padding-top: 2em; }
+.branch-wrapper .title-sm { color:#35a363}
+.branch-wrapper .branch-wrap {display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; background-color: #fafafa; padding: 2em 1.875em; margin-top: 2em;} 
+.branch-wrapper .branch {flex:24% 0 0; position: relative; overflow: hidden; cursor: pointer;}
+.branch-wrapper .branch img{transition:all 1s;}
+.branch-wrapper .branch:hover img{transform: scale(1.1);}
+.branch-wrapper .branch .bt-link{position: absolute; bottom: 1em; left: 50%; transform: translateX(-50%); outline:none; border: none; background-color: #fafafa; padding: 0.625em 1.5em; font-size: 1.125em; color: #444; font-family: 'Lora', serif; font-style: italic; box-shadow: 1px 1px 2px rgba(0,0,0,0.1); letter-spacing: 1.2; }
+
+
+/**************** blog wrapper ******************/
+.blog-wrapper .title-bars{margin-bottom: 2em;}
+.blog-wrapper .blog{position: relative;}
+.blog-wrapper .blog .date-wrap{position: absolute; background-color: #fafafa; width: 50px; height: 50px; top: 12px; left: 12px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.blog-wrapper .blog .date-wrap .date{font-size: 1.25em; }
+.blog-wrapper .blog .date-wrap .month{font-size: 0.75em; }
+.blog-wrapper .blog .tag{position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); background-color: #277045; color: #f8f8f8; padding: 0.25em 0.5em;}
+.blog-wrapper .blog .title {font-size: 1.5em; font-family: 'Lora', serif; padding: 0.5em 0; color: #333; transition:all 0.5s; cursor: pointer;}
+.blog-wrapper .blog .title:hover {color: #339059;}
+.blog-wrapper .blog .bt-comment { color: #666; font-style: italic; font-size: 0.875em; transition:all 0.5s;}
+.blog-wrapper .blog .bt-comment:hover {text-decoration: underline; opacity: 0.8;}
+.blog-wrapper .blog .desc {padding: 1em 0; font-size: 0.875em; color: #555;}
+.blog-wrapper .blog .bt-read {font-size: 0.875em; color: #888; transition:all 0.5s; border-bottom: 1px solid #888; }
+.blog-wrapper .blog .bt-read:hover {color: #333; border-bottom: 1px solid #333; }
+
+.blog-wrapper .bt-pager {opacity: 0;}
+.blog-wrapper .bt-prev {transform:translateX(100%); }
+.blog-wrapper .bt-next {transform:translateX(-100%);}
+.blog-wrapper .swiper-container:hover .bt-pager{transform:translateX(0); opacity: 1;}
+.blog-wrapper .swiper-pagination {bottom: 0; }
+
 /**************** mob wrapper ******************/
 .mob-wrapper {background-color: rgba(0,0,0,0); width: 100%; height: 100vh; position: fixed; z-index: 1000; top: 0; left: 0; transition:background-color 0.5s; display: none; }
 .mob-wrapper .mob-wrap {height: 100%; width: 270px; background-color: #0c0c0c; transition:left 0.5s; left: -270px; position: absolute; color: #f8f8f8; overflow-y: auto;}
@@ -295,6 +331,7 @@ border-bottom: 1px solid #111;	transform: scaleX(0); height: 2px; transform-orig
 	.middle-wrapper .middle:nth-child(2){flex:100% 0 0;}
 	.ctgr-wrapper .cate {flex-direction: column;}
 	.ctgr-wrapper .cate > div {flex:100% 0 0;}
+	.branch-wrapper .branch {flex: 49% 0 0;}
 }
 @media screen and (max-width: 767px) {
 	.gift-wrapper {flex-direction: column; align-items: stretch;}
@@ -306,4 +343,5 @@ border-bottom: 1px solid #111;	transform: scaleX(0); height: 2px; transform-orig
 	.title-wrapper > .navi-mob-wrap{ flex:35% 0 0;}
 	.title-wrapper > .logo-wrap {flex:30% 0 0; } 
 	.title-wrapper > .cart-wrap {flex:35% 0 0; }
+	.branch-wrapper .branch {flex: 98% 0 0;}
 }
