@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="../css/index.css">
 	<script src="../js/jquery-3.5.1.min.js"></script>
 	<script src="../js/jquery.touchSwipe.min.js"></script>
+	<script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script src="../js/imagesloaded.pkgd.min.js"></script>
 	<script src="../js/moment.min.js"></script>
@@ -180,6 +181,83 @@
 			</div>
 		</div>
 	</section><!-- //.blog-wrapper -->
+
+	<section class="news-wrapper">
+		<div class="wrapper-sm">
+			<div class="title-bars">
+				<div class="title">Our Newsletter</div>
+				<div class="title-desc">it only takes a second to be the first to find out about our latest promotion and news!</div>
+			</div>
+			<form method="post" id="contact-form" onsubmit="return mailSend(this);">
+				<input type="hidden" name="contact_number">
+				<div class="email"><i class="fa fa-envelope"></i> <input type="text" name="email" placeholder="Your email address"></div>
+				<textarea class="comment" name="msg" placeholder="Leave your comment"></textarea>
+				<button class="bt-send">SIGN UP</button>
+			</form>
+		</div>
+	</section><!-- //.news-wrapper -->
+
+
+	<footer class="footer-wrapper">
+		<div class="wrapper">
+			<div class="sns-wrap">
+				<a href="//facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+				<a href="//twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+				<a href="mailto:booldook@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+			</div>
+			<div class="menu-wrap">
+				<ul class="menus">
+					<li class="menu title">OUR STORES</li>
+					<li class="menu">New York</li>
+					<li class="menu">London SF</li>
+					<li class="menu">Cockfosters BP</li>
+					<li class="menu">Los Angeles</li>
+					<li class="menu">Chicago</li>
+					<li class="menu">Las Vegas</li>
+				</ul>
+				<ul class="menus">
+					<li class="menu title">INFORMATION</li>
+					<li class="menu">About Store</li>
+					<li class="menu">New Collection</li>
+					<li class="menu">Woman Dress</li>
+					<li class="menu">Contact Us</li>
+					<li class="menu">Latest News</li>
+					<li class="menu">Our Sitemap</li>
+				</ul>
+				<ul class="menus">
+					<li class="menu title">USEFUL LINKS</li>
+					<li class="menu">Privacy Policy</li>
+					<li class="menu">Returns</li>
+					<li class="menu">Terms & Conditions</li>
+					<li class="menu">Contact Us</li>
+					<li class="menu">Latest News</li>
+					<li class="menu">Our Sitemap</li>
+				</ul>
+				<ul class="menus">
+					<li class="menu title">FOOTER MENU</li>
+					<li class="menu">Instagram profile</li>
+					<li class="menu">New Collection</li>
+					<li class="menu">Woman Dress</li>
+					<li class="menu">Contact Us</li>
+					<li class="menu">Latest News</li>
+					<li class="menu">Purchase Theme</li>
+				</ul>
+				<ul class="menus">
+					<li class="menu title">ABOUT THE STORE</li>
+					<li class="menu">STORE - worldwide fashion store since 1978. We sell over 1000+ branded products on our web-site.</li>
+					<li class="menu"> <i class="fa fa-location-arrow"></i> 451 Wall Street, USA, New York</li>
+					<li class="menu"> <i class="fa fa-mobile"></i> Phone: (064) 332-1233</li>
+					<li class="menu menu-sns">
+						<img src="../img/payments.png">
+					</li>
+				</ul>
+			</div>
+			<div class="copy-wrap">
+				&copy;&nbsp;2019 Created by <a href="#"><b>The4 studio.</b></a> Premium e-commerce solutions.
+			</div>
+		</div>
+	</footer>
+
 
 	<nav class="mob-wrapper">
 		<div class="mob-wrap">

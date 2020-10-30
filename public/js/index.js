@@ -269,7 +269,6 @@ function onBannerLoad(r){
 }
 
 function onPrdLoad(r){
-	console.log(r);
 	var html = '';
 	for(var i in r.prds){
 		html = '<div class="slide swiper-slide">';
@@ -420,7 +419,6 @@ function onCateNaviClick(e){
 }
 
 function cateAni(id){
-	console.log(ctgrPrds[id])
 	$(".ctgr-wrapper .cate").css({"opacity":0,"transform":"translateY(100px)"});
 	var slide = $(ctgrPrds[id].clone()).appendTo(".ctgr-wrapper .cate-wrap").css({"opacity":0,"transform":"translateY(100px)","position":"absolute"});
 	slide.css("opacity");
@@ -559,3 +557,14 @@ function onMobNaviClick(){
 	$.get('../json/blog.json', onBlogLoad);
 	$(window).on("scroll",onScroll);
 	$(window).on("resize",onResize);
+
+		emailjs.init("user_OQNTTJmx8nuO6apvJPh5b");
+		function mailSend(x){
+			x.contact_number.value = Math.random() * 100000 | 0;
+			emailjs.sendForm('service_fur1cuq', 'template_a5s4ize', x);
+			return false;
+		}
+	
+		
+	
+	  
