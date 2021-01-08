@@ -1,68 +1,53 @@
 {
 	"navs": [
-		{"title": "HOME", "link": "#", "class":"IMAGE", "icon": "", "subs": [
-			{"title": "<span>1.</span> Bakery", "src": "../img/bakery.jpg", "link": "#"},
-			{"title": "<span>2.</span> Bicycle", "src": "../img/bicycle.jpg", "link": "#"},
-			{"title": "<span>3.</span> Car", "src": "../img/coffee.jpg", "link": "#"},
-			{"title": "<span>4.</span> coffee", "src": "../img/bakery.jpg", "link": "#"},
-			{"title": "<span>5.</span> Cosmetics", "src": "../img/cosmetics.jpg", "link": "#"},
-			{"title": "<span>6.</span> Electronics", "src": "../img/electronics.jpg", "link": "#"},
-			{"title": "<span>7.</span> Fashion", "src": "../img/fashion_2.jpg", "link": "#"},
-			{"title": "<span>8.</span> Furniture", "src": "../img/furniture.jpg", "link": "#"},
-			{"title": "<span>9.</span> Game", "src": "../img/game.jpg", "link": "#"},
-			{"title": "<span>10.</span> Lighting", "src": "../img/lighting.jpg", "link": "#"}
-		]},
 		{"title": "SHOP", "link": "#", "class":"COL WIDE COL4", "icon": "SALE", "color": "red", "subs": [
-				{"title": "SHOP STYLES", "link": "#", "subs": [
-					{"title": "Quick shop product", "link": "#", "icon": "HOT", "color": "yellow"},
-					{"title": "Masonry Grid", "link": "#", "icon": ""},
-					{"title": "Default style", "link": "#", "icon": ""},
-					{"title": "Alternative Shop", "link": "#", "icon": "HOT", "color": "yellow"},
-					{"title": "Button on hover", "link": "#", "icon": ""},
-					{"title": "Button hover alt", "link": "#", "icon": ""},
-					{"title": "Hover info", "link": "#", "icon": ""},
-					{"title": "Standard button", "link": "#", "icon": ""},
-					{"title": "Full width", "link": "#", "icon": ""}
+				{"title": "Men's", "link": "#", "subs": [
+					{"title": "All", "link": "#", "icon": ""},
+					{"title": "New", "link": "#", "icon": ""},
+					{"title": "Outwear", "link": "#", "icon": "Hot", "color":"green"},
+					{"title": "Top", "link": "#", "icon": ""},
+					{"title": "Bottom", "link": "#", "icon": ""},
+					{"title": "Acc", "link": "#", "icon": ""},
+					{"title": "Bags", "link": "#", "icon": ""},
+					{"title": "Shoes", "link": "#", "icon": ""},
+					{"title": "Sale", "link": "#", "icon": ""}
 				]},
-				{"title": "PRODUCT PAGES", "link": "#", "subs": [
-					{"title": "Default style", "link": "#", "icon": ""},
-					{"title": "Alternative style", "link": "#", "icon": ""},
-					{"title": "Compact", "link": "#", "icon": "NEW", "color": "green"},
-					{"title": "Sticky details", "link": "#", "icon": "HOT", "color": "yellow"},
-					{"title": "Variationst images", "link": "#", "icon": ""},
-					{"title": "Variations style 2", "link": "#", "icon": ""},
-					{"title": "Variant images grouped", "link": "#", "icon": ""},
-					{"title": "Powerful Layout", "link": "#", "icon": ""},
-					{"title": "With sidebar", "link": "#", "icon": ""}
+				{"title": "Women's", "link": "#", "subs": [
+					{"title": "All", "link": "#", "icon": ""},
+					{"title": "New", "link": "#", "icon": ""},
+					{"title": "Outwear", "link": "#", "icon":"" },
+					{"title": "Top", "link": "#", "icon": ""},
+					{"title": "Bottom", "link": "#", "icon": ""},
+					{"title": "Acc", "link": "#", "icon": ""},
+					{"title": "Bags", "link": "#", "icon": "HOT", "color": "green"},
+					{"title": "Shoes", "link": "#", "icon": ""},
+					{"title": "Sale", "link": "#", "icon": ""}
 				]},
-				{"title": "PRODUCT FEATURES", "link": "#", "subs": [
-					{"title": "360° product viewer", "link": "#", "icon": ""},
-					{"title": "Zoom image", "link": "#", "icon": ""},
-					{"title": "With video", "link": "#", "icon": "NEW", "color": "green"},
-					{"title": "Large Image", "link": "#", "icon": ""},
-					{"title": "Small Image", "link": "#", "icon": ""},
-					{"title": "Variable Product", "link": "#", "icon": ""},
-					{"title": "Grouped Product", "link": "#", "icon": ""},
-					{"title": "External Product", "link": "#", "icon": ""},
-					{"title": "Sidebar right", "link": "#", "icon": ""},
-					{"title": "Product Instagram Tags", "link": "#", "icon": ""}
+				{"title": "Life Style", "link": "#", "subs": [
+					{"title": "All", "link": "#", "icon": ""},
+					{"title": "New", "link": "#", "icon": ""},
+					{"title": "Living", "link": "#", "icon": ""},
+					{"title": "Mobile", "link": "#", "icon": "HOT", "color": "green"},
+					{"title": "Digital", "link": "#", "icon": ""},
+					{"title": "Camera", "link": "#", "icon": ""},
+					{"title": "Kitchen", "link": "#", "icon": ""},
+					{"title": "Camping", "link": "#", "icon": ""},
+					{"title": "Bicycle", "link": "#", "icon": ""}
 				]},
-				{"title": "SHOP PAGES", "link": "#", "subs": [
-					{"title": "2 Columns", "link": "#", "icon": ""},
-					{"title": "3 Columns", "link": "#", "icon": ""},
-					{"title": "4 Columns", "link": "#", "icon": ""},
-					{"title": "6 Columns", "link": "#", "icon": ""},
-					{"title": "Sidebar Left", "link": "#", "icon": ""},
-					{"title": "Sidebar Right", "link": "#", "icon": ""},
-					{"title": "No sidebar", "link": "#", "icon": ""},
-					{"title": "Category banner", "link": "#", "icon": ""},
-					{"title": "RTL Shop page", "link": "#", "icon": "NEW", "color": "green"}
+				{"title": "Sale Deal", "link": "#", "subs": [
+					{"title": "All", "link": "#", "icon": ""},
+					{"title": "Men's", "link": "#", "icon": "NEW", "color": "yellow"},
+					{"title": "Women's", "link": "#", "icon": ""},
+					{"title": "Life Style", "link": "#", "icon": ""},
+					{"title": "2020 A/W", "link": "#", "icon": "HOT", "color": "green"},
+					{"title": "Vintage / refurb", "link": "#", "icon": ""},
+					{"title": "RTL Shop page", "link": "#"}
 				]}
 			], "infos": [
-				{"title": "FREE SHIPPING", "link": "#", "content": "Free for $50+ orders", "icon": "fa fa-rocket"},
+				{"title": "FREE SHIPPING", "link": "#", "content": "Free for KRW50,000+ orders", "icon": "fa fa-rocket"},
 				{"title": "BUYER SUPPORT", "link": "#", "content": "Get in touch 24/7", "icon": "fa fa-phone"},
 				{"title": "TOTAL SECURITY", "link": "#", "content": "Secure checkout", "icon": "fa fa-th"},
-				{"title": "RETURN POLICY", "link": "#", "content": "14 days ago", "icon": "fa fa-reply"}
+				{"title": "RETURN POLICY", "link": "#", "content": "7 days ago", "icon": "fa fa-reply"}
 			], "slides": [
 				{
 					"cases": [
@@ -79,141 +64,116 @@
 							"color": "yellow"
 						}
 					],
-					"title": "Yus condntum sapien",
-					"brand": "BASEL",
-					"price": "$592.00",
+					"title": "Women Mustang Jacket",
+					"brand": "HOLUBA",
+					"price": "",
+					"priceDef": "KRW 576,000",
+					"priceSale": "KRW 403,200"
+				},
+				{
+					"cases": [
+						{
+							"img": ["../img/ss-02-beige-01.jpg", "../img/ss-02-beige-02.jpg"],
+							"color": "beige"
+						},
+						{
+							"img": ["../img/ss-02-black-01.jpg", "../img/ss-02-black-02.jpg"],
+							"color": "black"
+						},
+						{
+							"img": ["../img/ss-02-navy-01.jpg", "../img/ss-02-navy-01.jpg"],
+							"color": "navy"
+						}
+					],
+					"title": "Drift flex",
+					"brand": "ASTORFLEX",
+					"price": "KRW 175,000",
 					"priceDef": "",
 					"priceSale": ""
 				},
 				{
 					"cases": [
 						{
-							"img": ["../img/ss-02-blue-01.jpg"],
-							"color": "blue"
+							"img": ["../img/ss-03-blue-01.jpg", "../img/ss-03-blue-02.jpg"],
+							"color": "skyblue"
 						},
 						{
-							"img": ["../img/ss-02-red-01.jpg", "../img/ss-02-red-02.jpg"],
-							"color": "red"
+							"img": ["../img/ss-03-pink-01.jpg", "../img/ss-03-pink-02.jpg"],
+							"color": "beige"
 						},
 						{
-							"img": ["../img/ss-02-yellow-01.jpg"],
-							"color": "yellow"
+							"img": ["../img/ss-03-brown-01.jpg", "../img/ss-03-brown-02.jpg"],
+							"color": "darkgreen"
 						}
 					],
-					"title": "Yom orki lacinia",
-					"brand": "BASEL",
+					"title": "Oversized Shirts Jacket",
+					"brand": "BIRTHDAYSUIT",
 					"price": "",
-					"priceDef": "$799.00",
-					"priceSale": "$592.00"
-				},
-				{
-					"cases": [
-						{
-							"img": ["../img/ss-01-yellow-01.jpg", "../img/ss-01-yellow-02.jpg"],
-							"color": "yellow"
-						},
-						{
-							"img": ["../img/ss-01-black-01.jpg", "../img/ss-01-black-02.jpg"],
-							"color": "black"
-						},
-						{
-							"img": ["../img/ss-01-blue-01.jpg", "../img/ss-01-blue-02.jpg"],
-							"color": "blue"
-						}
-					],
-					"title": "Yus condntum sapien2",
-					"brand": "BASEL",
-					"price": "",
-					"priceDef": "$1,299.00",
-					"priceSale": "$892.00"
+					"priceDef": "KRW 148,000",
+					"priceSale": "KRW 103,600"
 				}
 			]
 		},
-		{"title": "BLOG", "link": "#", "class":"COL COL1", "icon": "", "subs": [ {"title":"","link":"","icon":"","subs":[
-			{"title":"BLOG DEFAULT", "link":"#", "icon":""},
-			{"title":"ALTERNATIVE STYLE", "link":"#", "icon":""},
-			{"title":"BLOG FULL WIDTH", "link":"#", "icon":""},
-			{"title":"SMALL IMAGES", "link":"#", "icon":""},
-			{"title":"MASONRY GRID", "link":"#", "icon":""},
-			{"title":"BLOG MASK", "link":"#", "icon":"HOT","color":"yellow"},
-			{"title":"4 COLUMNS", "link":"#", "icon":""},
-			{"title":"BLOG SINGLE POST", "link":"#", "icon":""},
-			{"title":"BLOG RTL", "link":"#", "icon":"NEW", "color":"green"}
+		{"title": "BOARD", "link": "#", "class":"COL COL1", "icon": "", "subs": [ {"title":"","link":"","icon":"","subs":[
+			{"title":"NOTICE", "link":"#", "icon":""},
+			{"title":"Q & A", "link":"#", "icon":""},
+			{"title":"REVIEW", "link":"#", "icon":""},
+			{"title":"EVENT", "link":"#", "icon":""},
+			{"title":"POLICY", "link":"#", "icon":""}
+			
 		]}
 		]},
 
-		{"title": "PAGES", "link": "#", "class":"COL COL4", "icon": "", "subs": [
-			{"title": "PAGES", "link": "#", "subs": [
-				{"title": "FaQs", "link": "#", "icon": "HOT", "color": "yellow"},
-				{"title": "About Me", "link": "#", "icon": ""},
-				{"title": "Our Shop", "link": "#", "icon": ""},
-				{"title": "Our Service", "link": "#", "icon": "" },
-				{"title": "Our Company", "link": "#", "icon": ""},
-				{"title": "Contact Us", "link": "#", "icon": ""},
-				{"title": "Contact Us 2", "link": "#", "icon": ""},
-				{"title": "Our Gallery", "link": "#", "icon": ""}
+		{"title": "BRANDS", "link": "#", "class":"COL COL4", "icon": "", "subs": [
+			{"title": "A ~ D", "link": "#", "subs": [
+				{"title": "ASTORFLEX", "link": "#", "icon": "HOT", "color": "yellow"},
+				{"title": "BIG WAVE", "link": "#", "icon": ""},
+				{"title": "BIRTHDAYSUIT", "link": "#", "icon": ""},
+				{"title": "CLARKS", "link": "#", "icon": "HOT", "color": "yellow" },
+				{"title": "CORONA UTILITY", "link": "#", "icon": ""},
+				{"title": "DAILY INN", "link": "#", "icon": ""},
+				{"title": "DARENIMO", "link": "#", "icon": ""},
+				{"title": "DECHO", "link": "#", "icon": ""}
 			]},
-				{"title": "HEADERS", "link": "#", "subs": [
-					{"title": "Header base", "link": "#", "icon": ""},
-					{"title": "Simplified", "link": "#", "icon": ""},
-					{"title": "With logo center", "link": "#", "icon": ""},
-					{"title": "Categories menu", "link": "#", "icon": "HOT", "color": "yellow"},
-					{"title": "Top bar menu", "link": "#", "icon": ""},
-					{"title": "Split menu", "link": "#", "icon": ""},
-					{"title": "Dark header", "link": "#", "icon": ""},
-					{"title": "Colored header", "link": "#", "icon": "HOT","color": "yellow"}
+				{"title": "E ~ I", "link": "#", "subs": [
+					{"title": "EFILEVOL", "link": "#", "icon": ""},
+					{"title": "ELSEWEAR", "link": "#", "icon": ""},
+					{"title": "Father loves you", "link": "#", "icon": ""},
+					{"title": "GRAMICCI", "link": "#", "icon": "HOT", "color": "yellow"},
+					{"title": "HOULUBAR", "link": "#", "icon": ""},
+					{"title": "INFIELDER DESIGN", "link": "#", "icon": "HOT", "color": "yellow"},
+					{"title": "IRIKA", "link": "#", "icon": ""},
+					{"title": "IYSO", "link": "#", "icon": ""}
 			] },
-			{"title": "PORTFOLIO", "link": "#", "subs": [
-				{"title": "Grid 4 Columns", "link": "#", "icon": "HOT", "color": "yellow"},
-				{"title": "Grid No Space", "link": "#", "icon": ""},
-				{"title": "Grid full width", "link": "#", "icon": ""},
-				{"title": "Alternative style", "link": "#", "icon": ""},
-				{"title": "Grid with text", "link": "#", "icon": ""},
-				{"title": "Single Project", "link": "#", "icon": ""},
-				{"title": "Project Full Width", "link": "#", "icon": ""},
-				{"title": "Project with video", "link": "#", "icon": ""}
+			{"title": "J ~ M", "link": "#", "subs": [
+				{"title": "KAME painty", "link": "#", "icon": ""},
+				{"title": "KANAA BRUSH", "link": "#", "icon": ""},
+				{"title": "LIFE ARCHIVE", "link": "#", "icon": ""},
+				{"title": "LONDON TRADITION", "link": "#", "icon": ""},
+				{"title": "MOIF", "link": "#", "icon": ""},
+				{"title": "MONOPISPA", "link": "#", "icon": ""},
+				{"title": "MOGYU", "link": "#", "icon": ""}
 		] },
-		{"title": "SHOP", "link": "#", "subs": [
-			{"title": "<i class='fa fa-shopping-cart'></i> Shopping Cart", "link": "#", "icon": ""},
-			{"title": "<i class='fa fa-credit-card'></i> Checkout", "link": "#", "icon": ""},
-			{"title": "<i class='fa fa-user'></i> My Account", "link": "#", "icon": ""},
-			{"title": "<i class='fa fa-heart'></i> Wishlist", "link": "#", "icon": ""},
-			{"title": "Track order", "link": "#", "icon": ""},
-			{"title": "404 Not Found", "link": "#", "icon": ""},
-			{"title": "Maintenance mode", "link": "#", "icon": ""},
-			{"title": "Maintenance 2", "link": "#", "icon": ""}
+		{"title": "N ~ Z", "link": "#", "subs": [
+			{"title": "NAPRON", "link": "#", "icon": ""},
+			{"title": "NORTH WORKS", "link": "#", "icon": ""},
+			{"title": "OMNIGOD", "link": "#", "icon": ""},
+			{"title": "POTER CLASSIC", "link": "#", "icon": ""},
+			{"title": "REPRODUCTION OF FOUND", "link": "#", "icon": ""},
+			{"title": "SOMEONE LIFE", "link": "#", "icon": ""},
+			{"title": "THE NERDS", "link": "#", "icon": ""},
+			{"title": "YMCL KY", "link": "#", "icon": ""}
 	] }]},
 
-		{"title": "FEATURES", "bg":"", "link": "#", "class":"COL COL3 BG", "icon": "","subs": [
-			{"title": "XTEMOS ELEMENTS", "link": "#", "subs": [
-				{"title": "Google Maps", "link": "#", "icon": ""},
-				{"title": "BannersHOT ", "link": "#", "icon": "HOT", "color": "yellow"},
-				{"title": "Titles ", "link": "#", "icon": ""},
-				{"title": "Instagram ", "link": "#", "icon": "" },
-				{"title": "Social Buttons ", "link": "#", "icon": ""},
-				{"title": "Team Member ", "link": "#", "icon": ""},
-				{"title": "Section Dividers", "link": "#", "icon": "NEW","color":"green"},
-				{"title": "Testimonials ", "link": "#", "icon": ""},
-				{"title": "Blog Element ", "link": "#", "icon": ""}
-			]},
-				{"title": "XTEMOS ELEMENTS", "link": "#", "subs": [
-					{"title": "Countdown timer ", "link": "#", "icon": ""},
-					{"title": "360 degree view", "link": "#", "icon": ""},
-					{"title": "Menu price ", "link": "#", "icon": ""},
-					{"title": "Infobox ", "link": "#", "icon": ""},
-					{"title": "Pricing tables", "link": "#", "icon": ""},
-					{"title": "Product AJAX arrows ", "link": "#", "icon": "HOT","color": "yellow"}
-				
-			] },
-			{"title": "FEATURES", "link": "#", "subs": [
-				{"title": "Basel Slider ", "link": "#", "icon": "NEW", "color": "green"},
-				{"title": "Product filters", "link": "#", "icon": "HOT","color": "yellow"},
-				{"title": "Extra menu list", "link": "#", "icon": ""},
-				{"title": "AJAX products tabs", "link": "#", "icon": ""},
-				{"title": "Animated counter", "link": "#", "icon": ""},
-				{"title": "Timeline", "link": "#", "icon": ""}
-			
-		]}
+		{"title": "MY PAGE", "bg":"", "link": "#", "class":"COL COL1 BG", "icon": "","subs": [
+			{"title": "Please Login First", "link": "#", "subs": [
+				{"title": "ORDER", "link": "#", "icon": ""},
+				{"title": "CART ", "link": "#", "icon": ""},
+				{"title": "WISH LIST ", "link": "#", "icon": ""},
+				{"title": "MY BOARD ", "link": "#", "icon": "" },
+				{"title": "MILEAGE ", "link": "#", "icon": ""},
+				{"title": "DELIVERY ", "link": "#", "icon": ""}
+			]}
 		
 	]}]
 }

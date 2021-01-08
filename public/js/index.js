@@ -144,7 +144,7 @@ function onNaviLoad(r) {
 				
 				html += '	<div class="color">';
 				for(var k in r.navs[i].slides[j].cases){
-					html += '		<span class="'+r.navs[i].slides[j].cases[k].color+'">●</span>';
+					html += '		<span class="'+r.navs[i].slides[j].cases[k].color+'" style="color:'+r.navs[i].slides[j].cases[k].color+'">●</span>';
 				}
 				html += '	</div>';
 				html += '	<div class="title">'+r.navs[i].slides[j].title+'</div>';
@@ -254,8 +254,8 @@ function onBannerLoad(r){
 		html = '<div class="slide" style="background-image : url('+r.banners[i].src+')">';
 		html += '<h3 class="desc">'+r.banners[i].desc+'</h3>';
 		html += '<h2 class="title">'+r.banners[i].title+'</h2>';
-		html += '<h4 class="price">$ <span>'+r.banners[i].price+'</span> </h4>';
-		html += '<button class="bt-banner">Shop Other</button>';
+		html += '<h4 class="price"> Recently <span>'+'</span> </h4>';
+		html += '<button class="bt-banner">Check LookBook</button>';
 		html += '</div>';
 		$banners.push($(html).appendTo(".banner-wrapper .slide-wrap"));
 	}
@@ -283,7 +283,7 @@ function onPrdLoad(r){
 		html += '<div class="title">'+r.prds[i].title+'</div>';
 		html += '<div class="brand">'+r.prds[i].code+'</div>';
 		html += '<div class="price-wrap">';
-		html += '<div class="price">$'+r.prds[i].price+'</div>';
+		html += '<div class="price">KRW'+r.prds[i].price+'</div>';
 		html += '<div class="cart">';
 		html += '<i class="fa fa-shopping-cart"></i>Add To Cart</div> ';
 		html += '</div>';
@@ -336,7 +336,7 @@ function onPrdCtgrLoad(r){
 		html += '<div class="cont">';
 		html += '<div class="designer">DESIGNERS: <span>'+r.ctgrs[i].designer+'</span></div>';
 		html += '<h2 class="title">'+r.ctgrs[i].title+'</h2>';
-		html += '<div class="price">$'+r.ctgrs[i].price+'</div>';
+		html += '<div class="price">KRW'+r.ctgrs[i].price+'</div>';
 		html += '<div class="desc">'+r.ctgrs[i].content+'</div>';
 		html += '<button class="bt-read">READ MORE</button> </div>';
 		html += '<div class="image"><img src="'+r.ctgrs[i].src[0]+'" alt="cate" class="w-100"></div>';
@@ -486,24 +486,25 @@ function bannerAni(){
 	}
 
 function onResize(e){
-	 var winWid = $(this).outerWidth();
-	 if(winWid > 991 && $(".mob-wrapper").css("display") == 'block') {$(".mob-wrapper").trigger("click");
-	 }
-	 scrollImages(getBannerWidth()*bannerNow,0);
+	var winWid = $(this).outerWidth();
+	if(winWid > 991 && $(".mob-wrapper").css("display") == 'block') {$(".mob-wrapper").trigger("click");
+	}
+	scrollImages(getBannerWidth()*bannerNow,0);
 }
 
 function onScroll(e){
 	var scTop = $(this).scrollTop();
 	if(scTop > 180){
-		$(".top-wrapper").css("display","none");
-		$(".search-wrapper").css("display","none");
 		$(".header-wrapper").css({"position":"fixed","transform":
 		"translateY(-10px)","top":"10px","box-shadow":"0 0 4px rgba(0,0,0,0.2)"});
+		$(".top-wrapper").css("display","none");
+		$(".search-wrapper").css("display","none");
 		$(".title-wrapper .navi.WIDE .sub-wrap ").css({"top":"85px"});
 	} else {
+		$(".header-wrapper").css({"position":"relative","top":0,"box-shadow":"none","transform":
+		"translateY(0)"});
 		$(".top-wrapper").css("display","block");
 		$(".search-wrapper").css("display","flex");
-		$(".header-wrapper").css({"position":"static","top":0,"box-shadow":"none"});
 		$(".title-wrapper .navi.WIDE .sub-wrap ").css({"top":"122px"});
 	}
 }
@@ -545,7 +546,15 @@ function onMobNaviClick(){
 	
 	}
 
-
+function cateEnter(){
+	$(".ctgr-wrap").slideDown(300);
+	
+}
+function cateLeave(){
+	$(".ctgr-wrap").slideUp(300);
+}
+$(".browse-wrap").mouseenter(cateEnter);
+$(".ctgr-wrap").mouseleave(cateLeave);
 	
 
 	$.get('../json/navi.json', onNaviLoad);
@@ -559,6 +568,7 @@ function onMobNaviClick(){
 	$(window).on("resize",onResize);
 
 		emailjs.init("user_OQNTTJmx8nuO6apvJPh5b");
+		
 		function mailSend(x){
 			x.contact_number.value = Math.random() * 100000 | 0;
 			emailjs.sendForm('service_fur1cuq', 'template_a5s4ize', x);
