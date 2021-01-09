@@ -336,7 +336,7 @@ function onPrdCtgrLoad(r){
 		html += '<div class="cont">';
 		html += '<div class="designer">DESIGNERS: <span>'+r.ctgrs[i].designer+'</span></div>';
 		html += '<h2 class="title">'+r.ctgrs[i].title+'</h2>';
-		html += '<div class="price">KRW'+r.ctgrs[i].price+'</div>';
+		html += '<div class="price">KRW '+r.ctgrs[i].price+'</div>';
 		html += '<div class="desc">'+r.ctgrs[i].content+'</div>';
 		html += '<button class="bt-read">READ MORE</button> </div>';
 		html += '<div class="image"><img src="'+r.ctgrs[i].src[0]+'" alt="cate" class="w-100"></div>';
@@ -505,7 +505,7 @@ function onScroll(e){
 		"translateY(0)"});
 		$(".top-wrapper").css("display","block");
 		$(".search-wrapper").css("display","flex");
-		$(".title-wrapper .navi.WIDE .sub-wrap ").css({"top":"122px"});
+		$(".title-wrapper .navi.WIDE .sub-wrap ").css({"top":"85px"});
 	}
 }
 

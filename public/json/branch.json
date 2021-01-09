@@ -1,8 +1,8 @@
 {
 	"branches":[
-		{"id":1,"title":"Furniture","src": "../img/furniture-categorie-1.jpg"},
-		{"id":2,"title":"Accessories","src": "../img/furniture-categorie-2.jpg"},
-		{"id":3,"title":"Synthesizers","src": "../img/furniture-categorie-3.jpg"},
-		{"id":4,"title":"Watches","src": "../img/furniture-categorie-4.jpg"}
+		{"id":1,"title":"MAT","src": "../img/furniture-categorie-1.jpg"},
+		{"id":2,"title":"CAMPING","src": "../img/furniture-categorie-2.jpg"},
+		{"id":3,"title":"KITCHEN","src": "../img/furniture-categorie-3.jpg"},
+		{"id":4,"title":"CAMERA","src": "../img/furniture-categorie-4.jpg"}
 	]
 }

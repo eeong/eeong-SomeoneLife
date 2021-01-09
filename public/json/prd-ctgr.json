@@ -1,7 +1,7 @@
 {
 	"ctgrs" : [
-		{"id":1, "class":"LT", "title":"EAMES SOFA COMPACT", "designer":"VALENTINO RACHELLI", "price":"800","content":"Vel himenaeos quam fringilla a interdum blandit adipiscing ullamcorper per consequat in ut a enim suspendisse luctus commodo varius dictumst egestas at curae ultricies nam.","src":["../img/cate-01-a.jpg","../img/cate-01-b.jpg"]},
-		{"id":2, "class":"CT", "title":"EAMES SOFA COMPACT", "designer":"CHARLES AND RAY EAMES", "price":"800","content":"Vel himenaeos quam fringilla a interdum blandit adipiscing ullamcorper per consequat in ut a enim suspendisse luctus commodo varius dictumst egestas at curae ultricies nam.","src":["../img/cate-02-a.jpg","../img/cate-02-b.jpg"]},
-		{"id":3, "class":"RT", "title":"EAMES SOFA COMPACT", "designer":"VALENTINO RACHELLI", "price":"800","content":"Vel himenaeos quam fringilla a interdum blandit adipiscing ullamcorper per consequat in ut a enim suspendisse luctus commodo varius dictumst egestas at curae ultricies nam.","src":["../img/cate-03-a.jpg","../img/cate-03-b.jpg"]}
+		{"id":1, "class":"LT", "title":"えがお(笑顔)", "designer":"KAME PAINTY", "price":"50,000","content":"카메 페인티의 프레임 오브제 입니다. えがお는 자연속에서 얻을 수 있는 기쁨을 표현한 작품으로 웃는 얼굴로 맞이할 수 있는 자연을 희망하는 마음도 있는 작품입니다. 깔끔한 느낌의 배경에 설치되어 감상하길 바라는 작가의 코멘트가 있습니다.","src":["../img/cate-01-a.jpg","../img/cate-01-b.jpg"]},
+		{"id":2, "class":"CT", "title":"Fabric Prefume  Diffuser", "designer":"IROKA", "price":"30,000","content":"이로카의 페브릭 퍼퓸/ 디퓨져 입니다. 진한 향기가 느껴지는 제품으로 만족도가 높습니다. 천연소재를 사용하여 걱정 없이 장기간 편안하게 사용이 가능합니다. 향으로 악취를 마스킹하여 탈취효과를 주는 방식이 아닌 천연 소취성분이 나쁜냄새를 완벽히 잡아줍니다.","src":["../img/cate-02-a.jpg","../img/cate-02-b.jpg"]},
+		{"id":3, "class":"RT", "title":"VINTAGE POSTER", "designer":"LIFE Magazine Honda", "price":"95,000","content":"LIFE Magazine은 20세기 최고의 사진들을 담은 최고의 잡지입니다. 현재는 폐간되어 구할 수 없기에 그 값어치는 더욱 높아졌습니다. 1983년을 기반으로 제작된 포스터는 80년대 초중반의 감성을 그대로 느끼기에 좋은 액자입니다.","src":["../img/cate-03-a.jpg","../img/cate-03-b.jpg"]}
 	]
 }

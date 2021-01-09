@@ -1,10 +1,10 @@
 {
 	"prds":[
-		{"id":1,"title":"Yovbeglass Side Chair","code":"DEMO-1","price":"579.00","src": ["../img/chair-01-f.jpg", "../img/chair-01-b.jpg"]},
-		{"id":2,"title":"Yood Side Chair","code":"DEMO-2","price":"579.00","src": ["../img/chair-02-f.jpg", "../img/chair-02-b.jpg"]},
-		{"id":3,"title":"Yovdad Plastic Chair","code":"DEMO-3","price":"579.00","src": ["../img/chair-03-f.jpg", "../img/chair-03-b.jpg"]},
-		{"id":4,"title":"Yovlastic Side Chair","code":"DEMO-4","price":"579.00","src": ["../img/chair-04-f.jpg", "../img/chair-04-b.jpg"]},
-		{"id":5,"title":"Yovlastic Chair","code":"DEMO-5","price":"579.00","src": ["../img/chair-05-f.jpg", "../img/chair-05-b.jpg"]},
-		{"id":6,"title":"Just Side Chair","code":"DEMO-6","price":"579.00","src": ["../img/chair-06-f.jpg", "../img/chair-06-b.jpg"]}
+		{"id":1,"title":"Women Mustang Jacket","code":"HOLUBA","price":"403,200","src": ["../img/ss-01-black-01.jpg", "../img/ss-01-black-02.jpg"]},
+		{"id":2,"title":"Drift flex","code":"ASTORFLEX","price":"175,000","src": ["../img/ss-02-beige-01.jpg", "../img/ss-02-beige-02.jpg"]},
+		{"id":3,"title":"Oversized Shirts Jacket","code":"BIRTHDAYSUIT","price":"103,600","src": ["../img/ss-03-blue-01.jpg", "../img/ss-03-blue-02.jpg"]},
+		{"id":4,"title":"Women Mustang Jacket","code":"HOLUBA","price":"403,200","src": ["../img/ss-01-yellow-01.jpg", "../img/ss-01-yellow-02.jpg"]},
+		{"id":5,"title":"Oversized Shirts Jacket","code":"BIRTHDAYSUIT","price":"103,600","src": ["../img/ss-03-brown-01.jpg", "../img/ss-03-brown-02.jpg"]},
+		{"id":6,"title":"Drift flex","code":"ASTORFLEX","price":"175,000","src": ["../img/ss-02-navy-01.jpg", "../img/ss-02-navy-02.jpg"]}
 	]
 }
