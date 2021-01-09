@@ -32,7 +32,7 @@ html, body {font-size: 16px; font-family: 'Rubik', sans-serif;}
 .title-bars > .title-desc { font-size: 0.875em; color: #666;}
 .title-bars > .title-sm{color: #999; letter-spacing: 0.5em; font-size: 0.75em; font-weight: normal;}
 .title-bars > .title{font-size: 1.5em; font-weight: 300; color: #222; padding: 0.75em;}
-.title-bars > .title-green{width: 40px; border: 1px solid #339059; margin: auto;}
+.title-bars > .title-green{width: 40px; border: 1px solid #ebe840; margin: auto;}
 
 .sub-slide {width: 100%; margin: auto;}
 .sub-slide .stage {position: relative; overflow: hidden;}
@@ -297,7 +297,7 @@ border-bottom: 1px solid #111;	transform: scaleX(0); height: 2px; transform-orig
 .footer-wrapper .sns-wrap i {padding: 1em; transition: all 0.3s; }
 .footer-wrapper .sns-wrap i:hover {padding: 1em; color: #f6f6f6; }
 .footer-wrapper .menu-wrap {display: flex; flex-wrap: wrap; }
-.footer-wrapper .menu-wrap > .menus { flex-basis: 16%; flex-grow: 0; flex-shrink: 1;  }
+.footer-wrapper .menu-wrap > .menus { flex-basis: 22%; flex-grow: 0; flex-shrink: 1;  }
 .footer-wrapper .menu-wrap > .menus:last-child { flex-grow: 1;}
 .footer-wrapper .menu {font-size: 0.875em; padding: 0.5em 0; transition:all 0.3s; color: #666; cursor: pointer;}
 .footer-wrapper .menu.title{font-size: 1em; color: #f6f6f6; cursor: default;}
