@@ -16,6 +16,10 @@
 *.code-workspace
 
 ### VisualStudioCode Patch ###
+
+# Old version files
+.old
+
 # Ignore all local history of files
 .history
 .ionide
