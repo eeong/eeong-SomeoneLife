@@ -1,5 +1,5 @@
 # 썸원라이프: 메인페이지
-## [배포 링크](https://eeong-someonelife.web.app)
+## [배포 링크](https://eeong-someonelife.web.app){: target="_blank"}
 <br>
 
 ## 사용 스택
