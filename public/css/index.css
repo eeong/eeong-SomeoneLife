@@ -177,7 +177,7 @@ html, body {font-size: 16px; font-family: 'Rubik', sans-serif;}
 .banner-wrapper .bt-next {right: 12px;}
 .banner-wrapper .bt-prev {left: 12px;}
 
-.banner-wrapper .slide-stage {position: relative; height: 100%; overflow: hidden; z-index: 1;}
+.banner-wrapper .slide-stage {position: relative; width:100%; height: 100%; overflow: hidden; z-index: 1;}
 .banner-wrapper .slide-wrap {width: 300%; height: 100%; display: flex; position: relative;}
 .banner-wrapper .slide {flex:33.3333% 0 0; height: 100%; background-position: center top; background-size: cover; background-repeat: no-repeat; display: flex; justify-content: center; align-items: center; flex-direction: column; cursor: grab;}
 .banner-wrapper .slide .desc {font-family: 'Lora', serif; font-size: 1.5em; font-style: italic; color: #339059;}
@@ -347,9 +347,10 @@ border-bottom: 1px solid #111;	transform: scaleX(0); height: 2px; transform-orig
 	.top-wrapper .link-wrap {display: none;}
 	.title-wrapper{padding: 0.5em 0; align-items: flex-end;}
 	.title-wrapper > .navi-mob-wrap{display: block; flex:25% 0 0;}
+	.title-wrapper > .navi-mob-wrap i{cursor: pointer;}
 	.title-wrapper > .navi-wrap {display: none;}
 	.title-wrapper > .logo-wrap {flex:50% 0 0; text-align: center;} 
-	.title-wrapper > .cart-wrap {flex:25% 0 0; justify-content: end; }
+	.title-wrapper > .cart-wrap {flex:25% 0 0; justify-content: flex-end; }
 	.title-wrapper > .cart-wrap .cart .cart-cnt{display: none;}
 	.title-wrapper > .cart-wrap .cart .badge{display: block;}
 	.title-wrapper > .cart-wrap span{display: none;}
@@ -360,6 +361,7 @@ border-bottom: 1px solid #111;	transform: scaleX(0); height: 2px; transform-orig
 	.middle-wrapper .middle:nth-child(2){flex:100% 0 0;}
 	.ctgr-wrapper .cate {flex-direction: column;}
 	.ctgr-wrapper .cate > div {flex:100% 0 0;}
+	.ctgr-wrapper .cate-wrap .cate .image {display: none;}
 	.branch-wrapper .branch {flex: 49% 0 0;}
 	.footer-wrapper .menu-wrap > .menus { flex-basis: 25%; margin-bottom: 2em;}
 	.footer-wrapper .menu-wrap > .menus:last-child { flex-basis: 100%;}
@@ -377,5 +379,7 @@ border-bottom: 1px solid #111;	transform: scaleX(0); height: 2px; transform-orig
 	.title-wrapper > .navi-mob-wrap{ flex:35% 0 0;}
 	.title-wrapper > .logo-wrap {flex:30% 0 0; } 
 	.title-wrapper > .cart-wrap {flex:35% 0 0; }
+	.title-wrapper > .cart-wrap .badge-wrap {margin: 0 0.5em;}
 	.branch-wrapper .branch {flex: 98% 0 0;}
+	.banner-wrapper .slide {background-position: right top; font-size: 0.6rem;}
 }
