@@ -248,7 +248,7 @@ border-bottom: 1px solid #111;	transform: scaleX(0); height: 2px; transform-orig
 .ctgr-wrapper .bt-read:hover {background-color: #35a363;}
 
 /**************** branch wrapper ******************/
-.branch-wrapper {background: url("../img/bg-categorie-2.jpg") no-repeat center -10vh; background-size: cover; padding-top: 2em; }
+.branch-wrapper {background: #ededed; no-repeat center -10vh; background-size: cover; padding-top: 2em; }
 .branch-wrapper .title-sm { color:#35a363}
 .branch-wrapper .branch-wrap {display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; background-color: #fafafa; padding: 2em 1.875em; margin-top: 2em;} 
 .branch-wrapper .branch {flex:24% 0 0; position: relative; overflow: hidden; cursor: pointer;}
