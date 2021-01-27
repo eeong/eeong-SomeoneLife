@@ -384,7 +384,7 @@ function onBlogLoad(r){
 		if(wid > 767 && wid <= 991){
 			count = 2;
 		}
-		else if(wid > 575 && wid <= 767){
+		else if(wid <= 767){
 			count = 1;
 		}
 		return count;
